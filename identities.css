@@ -1,0 +1,20 @@
+/* Licensed stock portraits for fictional personas. Existing surfaces own avatar sizes. */
+.identity-avatar,.identity-brand{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;overflow:hidden;vertical-align:middle;border-radius:6px;background:#e8e5e8;color:transparent}
+.identity-avatar>img.identity-photo{display:block;width:100%;height:100%;min-width:0;max-width:none;object-fit:cover;object-position:center;border:0;border-radius:inherit;padding:0;margin:0}
+.identity-avatar[data-person="karim"]>img.identity-photo{object-position:center 20%}
+.identity-app{display:inline-flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;border-radius:6px;background:#f5f3ed;color:transparent}
+.identity-app>.identity-logo{display:block;width:100%;height:100%;object-fit:contain;padding:2px}
+.identity-brand>img.identity-logo{display:block;width:100%;height:100%;min-width:0;max-width:none;object-fit:contain;border:0;border-radius:0;padding:4px;margin:0}
+.slack-panel .message-avatar.identity-avatar,.slack-dialog .message-avatar.identity-avatar{padding:0;background:#e8e5e8;color:transparent}
+.slack-panel .identity-brand,.slack-dialog .identity-brand{padding:0;background:#fff;color:transparent;border-color:#d9e0d3}
+.slack-panel .workspace-avatar.identity-brand{background:#fff;border:1px solid #d6dfce;box-shadow:0 1px 3px #180d231f;border-radius:9px}
+.slack-panel .workspace-avatar.identity-brand>.identity-logo{padding:3px}
+.slack-panel .profile-mini.identity-avatar{padding:0;border-radius:5px}
+.slack-panel .avatar-stack>.identity-avatar{width:25px;height:25px;margin-left:-5px;border:2px solid #fff;border-radius:6px}
+.slack-panel .avatar-stack>.identity-avatar:first-child{margin-left:0}
+.slack-panel .mobile-bottom-nav .identity-avatar{width:24px;height:24px;border-radius:6px}
+.slack-dialog .shell-profile>.identity-avatar{width:80px;height:80px;border-radius:12px}
+.slack-dialog .shell-teammate>.identity-avatar,.slack-dialog .shell-sample-message>.identity-avatar{width:36px;height:36px}
+.identity-store-photo{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:7px;background:#e8ede0}
+.identity-store-logo{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;padding:20%;background:#f2f6ec;border-radius:7px}
+@media(prefers-reduced-motion:reduce){.identity-avatar,.identity-brand{animation:none;transition:none}}

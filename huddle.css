@@ -1,0 +1,254 @@
+/* A scoped Slack huddle preview, contained by the existing client dialog. */
+.client-dialog-layer #dialog.slack-huddle-dialog{flex-basis:760px;width:100%;max-width:760px;border-color:#5b356d;border-radius:13px;background:#3d1b4a;color:#fff}
+.client-dialog-layer #dialog.slack-huddle-dialog .dialog-top{position:absolute;z-index:5;right:7px;top:7px;margin:0;padding:0;background:transparent}
+.client-dialog-layer #dialog.slack-huddle-dialog .dialog-top .eyebrow{display:none}
+.client-dialog-layer #dialog.slack-huddle-dialog .dialog-top .icon-button{background:transparent;color:#fff;width:32px;height:32px;min-width:32px}
+.client-dialog-layer #dialog.slack-huddle-dialog #dialog-title{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.client-dialog-layer #dialog.slack-huddle-dialog #dialog-content{padding:0!important;scroll-padding:12px;scrollbar-color:#896797 #3d1b4a}
+.slack-huddle-dialog #dialog-content>.feature-context{display:none}
+.slack-huddle{container-type:inline-size;min-width:0;border-radius:12px;background:#3d1b4a;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.45}
+.slack-huddle *{box-sizing:border-box}
+.slack-huddle [hidden]{display:none!important}
+.slack-huddle button,.slack-huddle textarea,.slack-huddle input{font:inherit}
+.slack-huddle button{cursor:pointer}
+.slack-huddle button:disabled{cursor:default;opacity:.4}
+.slack-huddle button:focus-visible,.slack-huddle textarea:focus-visible,.slack-huddle input:focus-visible{outline:3px solid #b6dafa;outline-offset:3px}
+.slack-huddle .sh-icon{display:block;width:20px;height:20px;flex:0 0 auto}
+.slack-huddle .sh-header{display:flex;align-items:center;gap:12px;min-height:62px;padding:13px 49px 10px 17px;background:#492554;border-bottom:1px solid #ffffff13}
+.slack-huddle .sh-channel{display:flex;align-items:center;gap:9px;min-width:0}
+.slack-huddle .sh-channel>.sh-icon{width:23px;height:23px;color:#e4cee9}
+.slack-huddle .sh-channel b{display:block;max-width:100%;font-size:14px;overflow-wrap:anywhere}
+.slack-huddle .sh-channel div>span{display:block;margin-top:2px;color:#d2bdd9;font-size:10px}
+.slack-huddle .sh-preview-badge{margin-left:auto;padding:3px 5px;border:1px solid #a580b35c;border-radius:4px;color:#d4badf;font-size:8px;font-weight:700;letter-spacing:.5px}
+.slack-huddle .sh-huddle-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 15px;color:#d2badc;font-size:10px}
+.slack-huddle .sh-participants-count:before{content:'';display:inline-block;width:6px;height:6px;margin-right:6px;border-radius:50%;background:#a5d29f}
+.slack-huddle .sh-notes-toggle{display:flex;align-items:center;gap:5px;min-height:28px;padding:4px 7px;border:1px solid #ffffff25;border-radius:6px;background:#ffffff09;color:#e9dfee;font-size:10px}
+.slack-huddle .sh-notes-toggle .sh-icon{width:13px;height:13px}
+.slack-huddle .sh-notes-toggle[aria-pressed=true]{background:#eee3f2;color:#46204f}
+.slack-huddle .sh-layout{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(190px,1fr);align-items:stretch;gap:0;min-width:0}
+.slack-huddle .sh-call-stage{min-width:0;padding:3px 12px 12px}
+.slack-huddle .sh-participant-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;min-width:0}
+.slack-huddle .sh-participant,.slack-huddle .sh-share-tile{position:relative;min-width:0;aspect-ratio:1.22;border:1px solid #93709f5e;border-radius:8px;overflow:hidden;background:#624270}
+.slack-huddle .sh-photo{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;border-radius:0;background:#634272}
+.slack-huddle .sh-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 34%;border-radius:0}
+.slack-huddle .sh-participant-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#160d21b8,transparent 60%)}
+.slack-huddle .is-waiting .sh-photo{opacity:.5;filter:grayscale(.5)}
+.slack-huddle .sh-tile-badge{position:absolute;left:6px;top:6px;padding:2px 4px;border-radius:3px;background:#25112c99;color:#f5eaf9;font-size:8px;line-height:1.3}
+.slack-huddle .sh-person-caption{position:absolute;left:7px;right:22px;bottom:7px;line-height:1.25}
+.slack-huddle .sh-person-caption b{display:block;font-size:10px;font-weight:700;overflow-wrap:anywhere;text-shadow:0 1px 3px #0006}
+.slack-huddle .sh-person-caption b small{font-size:8px;font-weight:400}
+.slack-huddle .sh-role-label{display:none;margin-top:3px;font-size:8px;color:#e6d8ed}
+.slack-huddle.show-roles .sh-role-label{display:block}
+.slack-huddle .sh-tile-mic{position:absolute;right:5px;bottom:7px;padding:2px;border-radius:4px;background:#25112c80}
+.slack-huddle .sh-tile-mic .sh-icon{width:11px;height:11px}
+.slack-huddle.is-muted [data-huddle-person=omar] .sh-tile-mic:after{content:'';position:absolute;top:7px;left:1px;width:15px;height:2px;transform:rotate(-45deg);background:#f7b1bf}
+.slack-huddle.camera-off [data-huddle-person=omar] .sh-photo{inset:19% 26%;width:48%;height:48%;border-radius:50%;overflow:hidden}
+.slack-huddle.camera-off [data-huddle-person=omar] .sh-photo img{border-radius:50%}
+.slack-huddle .sh-share-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px 8px;text-align:center;background:#4d2b5b;color:#dbc6e4}
+.slack-huddle .sh-share-symbol{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#ffffff13}
+.slack-huddle .sh-share-symbol .sh-icon{width:16px;height:16px}
+.slack-huddle .sh-share-tile>b{font-size:10px;color:#f7edf9}
+.slack-huddle .sh-share-tile>span:last-child{font-size:9px;line-height:1.4;max-width:120px}
+.client-dialog-layer #dialog-content .slack-huddle .sh-status{margin:9px 0;color:#d9c8e2;font-size:10px;line-height:1.5}
+.client-dialog-layer #dialog .slack-huddle .sh-join,.client-dialog-layer #dialog .slack-huddle .sh-finish{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:40px;padding:9px 11px;border:1px solid #fff;border-radius:6px;background:#fff;color:#3c1848;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;line-height:1.4;white-space:normal}
+.slack-huddle .sh-join .sh-icon{width:16px;height:16px}
+.slack-huddle .sh-thread{display:flex;flex-direction:column;min-width:0;margin:3px 12px 12px 0;border:1px solid #ffffff25;border-radius:8px;background:#4a2858;overflow:hidden}
+.slack-huddle .sh-thread-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 11px;border-bottom:1px solid #ffffff15}
+.slack-huddle .sh-thread-heading b{font-size:12px}
+.slack-huddle .sh-thread-heading>span{font-size:8px;color:#cfb9d9}
+.slack-huddle .sh-thread-messages{flex:1;min-height:125px;max-height:270px;overflow:auto;overscroll-behavior:contain;padding:11px 9px;scrollbar-width:thin;scrollbar-color:#8f729a transparent}
+.slack-huddle .sh-thread-message{display:flex;align-items:flex-start;gap:7px;margin:0 0 13px;min-width:0}
+.slack-huddle .sh-thread-avatar{display:block;width:25px;height:25px;min-width:25px;flex:0 0 25px;border-radius:5px;overflow:hidden}
+.slack-huddle .sh-thread-avatar img{display:block;width:100%;height:100%;object-fit:cover}
+.slack-huddle .sh-thread-message>div{min-width:0}
+.slack-huddle .sh-thread-message b{display:block;color:#fff;font-size:10px;line-height:1.5;overflow-wrap:anywhere}
+.slack-huddle .sh-thread-message b small{font-size:8px;color:#bfa5ca;font-weight:400;white-space:nowrap}
+.client-dialog-layer #dialog-content .slack-huddle .sh-thread-message p{margin:3px 0 0;color:#e4d8e9;font-size:10px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.slack-huddle .sh-attached-issue{margin:0 0 13px 2px;padding:9px 10px;border:1px solid #9678a34f;border-left:3px solid #ae8bbb;border-radius:4px;background:#32163f52}
+.slack-huddle .sh-attached-issue>span{display:flex;align-items:center;gap:4px;margin-bottom:6px;color:#ceb8d8;font-size:8px}
+.slack-huddle .sh-attached-issue .sh-icon{width:12px;height:12px}
+.slack-huddle .sh-attached-issue>b{font-size:10px;color:#f8f2fa}
+.client-dialog-layer #dialog-content .slack-huddle .sh-attached-issue p{margin:4px 0 6px;color:#e4d8e9;font-size:10px;line-height:1.5;overflow-wrap:anywhere}
+.slack-huddle .sh-attached-issue small{font-size:8px;color:#c6b0d1}
+.slack-huddle .sh-thread-composer{margin:0 8px 8px;border:1px solid #a786b45e;border-radius:5px;background:#351b43}
+.slack-huddle .sh-thread-composer textarea{display:block;width:100%;min-height:48px;max-height:120px;resize:vertical;margin:0;padding:8px;border:0;background:transparent;color:#f3eaf7;font-size:11px;line-height:1.4}
+.slack-huddle .sh-thread-composer textarea::placeholder{color:#bba4c6}
+.slack-huddle .sh-thread-composer>div{display:flex;align-items:center;justify-content:space-between;gap:5px;padding:0 5px 5px 8px}
+.slack-huddle .sh-thread-composer small{font-size:8px;color:#bca4c7}
+.slack-huddle .sh-thread-composer button{display:flex;align-items:center;justify-content:center;width:30px;height:28px;padding:5px;border:0;border-radius:4px;background:#bea7d0;color:#381849}
+.slack-huddle .sh-thread-composer button .sh-icon{width:15px;height:15px}
+.slack-huddle .sh-outcome:empty{display:none}
+.slack-huddle .sh-outcome{display:flex;align-items:center;gap:12px;margin:0 12px 12px;padding:10px;border:1px solid #b89acd4d;border-radius:7px;background:#50305f}
+.slack-huddle .sh-outcome>span{display:flex;align-items:center;gap:6px;flex:1;font-size:10px;color:#e3d4ec;line-height:1.5}
+.slack-huddle .sh-outcome>span .sh-icon{width:16px;height:16px;color:#b9ddac}
+.client-dialog-layer #dialog .slack-huddle .sh-finish{flex:1.3;width:auto;font-size:11px}
+.slack-huddle .sh-toolbar{display:flex;align-items:center;gap:7px;padding:10px 12px;border-top:1px solid #ffffff17;background:#30123d}
+.slack-huddle .sh-device-controls{display:flex;align-items:center;gap:4px;flex:1;min-width:0}
+.slack-huddle .sh-control{position:relative;display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:33px;height:33px;padding:7px;border:1px solid transparent;border-radius:6px;background:transparent;color:#eee1f5}
+.slack-huddle .sh-control:hover{background:#ffffff16}
+.slack-huddle .sh-control .sh-icon{width:18px;height:18px}
+.slack-huddle .sh-control[aria-pressed=true],.slack-huddle .sh-control[aria-expanded=true]{border-color:#ba96ce44;background:#714f80;color:#fff}
+.slack-huddle.is-muted [data-huddle-control=mic]:after,.slack-huddle.camera-off [data-huddle-control=camera]:after{content:'';position:absolute;top:15px;left:6px;width:21px;height:2px;transform:rotate(-45deg);background:#f4b2c0}
+.slack-huddle .sh-leave{display:flex;align-items:center;justify-content:center;gap:5px;flex:0 0 auto;min-height:33px;padding:7px 10px;border:1px solid #e370826b;border-radius:6px;background:#b7445b;color:#fff;font-size:11px;font-weight:700}
+.slack-huddle .sh-leave .sh-icon{width:16px;height:16px}
+.slack-huddle .sh-thread-toggle{margin-left:2px;border-left-color:#ffffff22}
+.client-dialog-layer #dialog-content .slack-huddle .sh-preview-status{margin:0;padding:0 12px 10px;background:#30123d;color:#baa2c7;font-size:9px;line-height:1.5}
+.slack-huddle .sh-tool-tray{margin:0 12px 10px;padding:10px;border:1px solid #a888b250;border-radius:7px;background:#593768;color:#f4edf8}
+.slack-huddle .sh-tool-tray>b{display:block;margin-bottom:8px;font-size:11px}
+.slack-huddle .sh-tool-tray>div{display:flex;gap:6px}
+.slack-huddle .sh-tool-tray button{min-width:40px;min-height:36px;padding:5px 9px;border:1px solid #c4a7d340;border-radius:5px;background:#ffffff0e;font-size:20px}
+.slack-huddle .sh-reaction-result{position:absolute;right:7px;top:7px;display:flex;align-items:center;justify-content:center;width:33px;height:33px;border:1px solid #ffffff77;border-radius:50%;background:#f8f1fc;color:#452052;font-size:21px;box-shadow:0 2px 8px #21102738}
+.slack-huddle .sh-settings label{display:flex;align-items:center;gap:8px;font-size:11px}
+.slack-huddle .sh-settings input{width:16px;height:16px;accent-color:#c7a8df}
+.slack-huddle .sh-settings>small{display:block;margin-top:8px;font-size:9px;color:#cfb7db}
+.slack-huddle .sh-notes-preview{padding:10px;border:1px solid #c6a8d53d;border-radius:5px;background:#ffffff08}
+.slack-huddle .sh-notes-preview>b{font-size:10px}
+.client-dialog-layer #dialog-content .slack-huddle .sh-notes-preview p{margin:5px 0;color:#e5d5ec;font-size:10px;line-height:1.5}
+.slack-huddle .sh-notes-preview small{font-size:8px;color:#c1a9cd}
+.slack-huddle .sh-screen-preview{width:100%;height:100%;padding:7px;border-radius:4px;background:#f4eff7;color:#41274b;text-align:left;overflow:hidden}
+.slack-huddle .sh-screen-preview>span{display:flex;gap:4px;align-items:center;padding-bottom:6px;border-bottom:1px solid #ddd0e4;color:#735b80;font-size:7px}
+.slack-huddle .sh-screen-preview .sh-icon{width:11px;height:11px}
+.slack-huddle .sh-screen-preview>b{display:block;margin:7px 0;font-size:11px}
+.client-dialog-layer #dialog-content .slack-huddle .sh-screen-preview p{margin:3px 0;padding:5px;background:#e6daec;color:#5e466b;font-size:8px;line-height:1.3}
+.slack-huddle .sh-screen-preview>div,.slack-huddle .sh-screen-preview>small{display:block;margin-top:6px;font-size:7px;line-height:1.35}
+.slack-huddle.thread-hidden .sh-layout{grid-template-columns:minmax(0,1fr)}
+.slack-huddle.thread-hidden .sh-participant-grid{max-width:470px;margin-inline:auto}
+.slack-huddle .sh-visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@container (max-width:460px){
+  .slack-huddle .sh-header{min-height:57px;padding:11px 45px 9px 12px;gap:6px}
+  .slack-huddle .sh-channel b{font-size:12px}
+  .slack-huddle .sh-channel div>span{font-size:9px}
+  .slack-huddle .sh-preview-badge{font-size:7px;padding:2px 4px}
+  .slack-huddle .sh-huddle-meta{padding:6px 12px;font-size:9px}
+  .slack-huddle .sh-layout{grid-template-columns:minmax(0,1fr)}
+  .slack-huddle .sh-call-stage{padding:3px 10px 9px}
+  .slack-huddle .sh-participant,.slack-huddle .sh-share-tile{aspect-ratio:1.7}
+  .slack-huddle .sh-participant-grid{gap:6px;max-width:400px;margin-inline:auto}
+  .slack-huddle .sh-share-tile{gap:4px;padding:7px}
+  .slack-huddle .sh-share-symbol{width:22px;height:22px}
+  .slack-huddle .sh-share-tile>span:last-child{font-size:8px;max-width:135px}
+  .slack-huddle .sh-thread{margin:0 10px 10px}
+  .slack-huddle .sh-thread-messages{max-height:170px;min-height:80px;padding:9px}
+  .slack-huddle .sh-thread-heading{padding:8px 10px}
+  .slack-huddle .sh-thread-composer textarea{min-height:38px;max-height:80px;font-size:16px}
+  .slack-huddle .sh-outcome{flex-direction:column;align-items:stretch;gap:7px;margin:0 10px 10px;padding:9px}
+  .slack-huddle .sh-toolbar{flex-wrap:wrap;gap:5px;padding:8px}
+  .slack-huddle .sh-device-controls{gap:2px}
+  .slack-huddle .sh-control{width:30px;height:36px;padding:6px}
+  .slack-huddle .sh-leave{min-height:36px;padding:6px 8px;font-size:10px}
+  .slack-huddle .sh-leave .sh-icon{width:15px;height:15px}
+  .slack-huddle .sh-thread-toggle{width:30px;margin:0}
+  .slack-huddle .sh-preview-status{font-size:8px!important;padding:0 10px 8px!important}
+  .slack-huddle .sh-tool-tray{margin:0 10px 8px}
+}
+@container (max-width:310px){
+  .slack-huddle .sh-header .sh-preview-badge{display:none}
+  .slack-huddle .sh-person-caption b{font-size:9px}
+  .slack-huddle .sh-device-controls{flex:1 1 calc(100% - 76px)}
+  .slack-huddle .sh-thread-toggle{margin-left:auto}
+  .slack-huddle .sh-leave{order:3}
+}
+
+/* Light collaboration surfaces match the Slack huddle reference. */
+.slack-huddle .sh-room-subtitle{color:#cdb5d8;font-size:9px}
+.slack-huddle .sh-layout{background:#efedf3;padding-top:10px}
+.slack-huddle .sh-call-stage{background:#efedf3}
+.client-dialog-layer #dialog-content .slack-huddle .sh-status{color:#65596d}
+.slack-huddle .sh-thread{border-color:#dcd7e1;background:#fff}
+.slack-huddle .sh-thread-heading{border-color:#e8e4ec;background:#fff;color:#2e2535}
+.slack-huddle .sh-thread-heading>span{color:#7e7586}
+.slack-huddle .sh-thread-messages{background:#fff;scrollbar-color:#c5bfcb transparent}
+.slack-huddle .sh-thread-message b{color:#2e2535}
+.slack-huddle .sh-thread-message b small{color:#837a8b}
+.client-dialog-layer #dialog-content .slack-huddle .sh-thread-message p{color:#514758}
+.slack-huddle .sh-attached-issue{border-color:#e0dce6;border-left-color:#8c6ca4;background:#f7f5f9}
+.slack-huddle .sh-attached-issue>span{color:#73657f}
+.slack-huddle .sh-attached-issue>b{color:#382c42}
+.client-dialog-layer #dialog-content .slack-huddle .sh-attached-issue p{color:#54495e}
+.slack-huddle .sh-attached-issue small{color:#7d6f87}
+.slack-huddle .sh-thread-composer{border-color:#d9d3df;background:#fff}
+.slack-huddle .sh-thread-composer textarea{color:#382d40}
+.slack-huddle .sh-thread-composer textarea::placeholder{color:#827789}
+.slack-huddle .sh-thread-composer small{color:#8b8092}
+.slack-huddle .sh-thread-composer button{background:#745183;color:#fff}
+.slack-huddle .sh-notes-preview{border-color:#ddd3e7;background:#f4eff8;color:#493655}
+.client-dialog-layer #dialog-content .slack-huddle .sh-notes-preview p{color:#5d4d69}
+.slack-huddle .sh-notes-preview small{color:#877391}
+.slack-huddle .sh-outcome{margin:0;padding:11px 12px;border:0;border-top:1px solid #ded7e5;border-radius:0;background:#f4f1f7}
+.slack-huddle .sh-outcome>span{color:#65556f}
+.slack-huddle .sh-outcome>span .sh-icon{color:#428240}
+.client-dialog-layer #dialog .slack-huddle .sh-join,.client-dialog-layer #dialog .slack-huddle .sh-finish{border-color:#573267;background:#573267;color:#fff}
+.slack-huddle .sh-toolbar>.sh-notes-toggle{flex:0 0 auto;min-height:33px;white-space:nowrap}
+@container (max-width:460px){
+  .slack-huddle .sh-device-controls{order:0;flex:1 1 100%;justify-content:center;gap:5px}
+  .slack-huddle .sh-toolbar>.sh-notes-toggle{order:1;min-height:40px;margin-right:auto}
+  .slack-huddle .sh-toolbar>.sh-leave{order:1;min-height:40px}
+  .slack-huddle .sh-toolbar>.sh-thread-toggle{order:1;margin-left:2px}
+  .slack-huddle .sh-control{width:40px;height:40px}
+  .slack-huddle .sh-toolbar{gap:6px 8px}
+}
+
+.slack-huddle .sh-native-emoji,.slack-huddle .sh-reaction-result,.slack-huddle [data-huddle-reaction]{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+.slack-huddle .sh-message-reaction{display:inline-flex;align-items:center;gap:5px;min-height:25px;margin-top:8px;padding:3px 7px;border:1px solid #d4c8e0;border-radius:13px;background:#fff;color:#6c5483;font-size:10px;font-weight:700;line-height:1}
+.slack-huddle .sh-message-reaction .sh-native-emoji{font-size:13px;font-weight:400;line-height:1.2}
+.slack-huddle .sh-message-reaction[aria-pressed=true]{border-color:#9c71ba;background:#f0e6f8;color:#563275}
+.slack-huddle .sh-message-reaction:disabled{opacity:.75}
+
+
+/* Slack notification and invitation sheet, scoped to the client bounds. */
+.client-dialog-layer:has(#dialog.slack-huddle-invitation){padding:0;background:rgba(21,17,25,.43)}
+.client-dialog-layer #dialog.slack-huddle-invitation{flex:1 1 100%;width:100%;height:100%;max-width:100%;max-height:100%;margin:0;border:0;border-radius:0;background:transparent;box-shadow:none;color:#1d1c1d}
+.client-dialog-layer #dialog.slack-huddle-invitation .dialog-top{display:none}
+.client-dialog-layer #dialog.slack-huddle-invitation #dialog-title{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.client-dialog-layer #dialog.slack-huddle-invitation #dialog-content{display:flex;flex-direction:column;min-height:0;height:100%;padding:0!important;scroll-padding:10px;background:transparent;scrollbar-width:none}
+.slack-huddle-invitation #dialog-content>.feature-context{display:none}
+.huddle-invitation{display:flex;flex:1 0 auto;flex-direction:column;justify-content:space-between;align-items:center;gap:22px;width:100%;min-height:100%;padding:16px;font-family:Arial,Helvetica,sans-serif;box-sizing:border-box}
+.huddle-invitation *{box-sizing:border-box}
+.huddle-invite-notification{width:min(460px,100%);padding:11px 13px;border:1px solid #ffffff52;border-radius:15px;background:rgba(247,246,249,.94);box-shadow:0 5px 20px #18132125;color:#242026;backdrop-filter:blur(12px)}
+.huddle-invite-app{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.huddle-invite-app-icon{display:block;flex:0 0 auto;width:20px;height:20px;border-radius:5px}
+.huddle-invite-app>b{font-size:10px;line-height:1.3;font-weight:600;letter-spacing:.45px;color:#635d68}
+.huddle-invite-app>span{margin-left:auto;font-size:10px;color:#807787}
+.huddle-invite-notification-copy>b{display:block;font-size:13px;line-height:1.4;overflow-wrap:anywhere}
+.client-dialog-layer #dialog-content .huddle-invite-notification-copy>p{margin:2px 0 0;color:#373139;font-size:13px;line-height:1.45;overflow-wrap:anywhere}
+.huddle-invite-sheet{width:min(390px,100%);padding:17px 22px 22px;border:1px solid #e1dce5;border-radius:18px;background:#fff;box-shadow:0 10px 35px #1711203b;color:#211b25;text-align:center}
+.huddle-invite-handle{display:block;width:35px;height:4px;margin:-5px auto 20px;border-radius:4px;background:#d4cfd7}
+.huddle-invite-heading{display:flex;flex-direction:column;align-items:center;gap:10px}
+.huddle-invite-heading>.sh-icon{width:25px;height:25px;color:#4a154b}
+.client-dialog-layer #dialog-content .huddle-invite-heading>h3{margin:0;font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:700;line-height:1.3;color:#211b25}
+.client-dialog-layer #dialog-content .huddle-invite-channel{margin:6px 0 18px;font-size:14px;line-height:1.4;font-weight:600;color:#69606f;overflow-wrap:anywhere}
+.huddle-invite-people{display:flex;justify-content:center;gap:22px;margin:0 0 22px}
+.huddle-invite-people>div{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0;max-width:110px}
+.huddle-invite-avatar{display:block;width:51px;height:51px;min-width:51px;max-width:none;border-radius:10px;overflow:hidden;background:#e8e2eb}
+.huddle-invite-avatar>img{display:block;width:100%;height:100%;object-fit:cover;border-radius:10px}
+.huddle-invite-people>div>span:last-child{font-size:10px;line-height:1.4;color:#716779;overflow-wrap:anywhere}
+.huddle-invite-actions{display:flex;gap:10px}
+.huddle-invite-actions>button,.client-dialog-layer #dialog .huddle-invite-actions>.primary-button{display:flex;flex:1;align-items:center;justify-content:center;gap:7px;min-width:0;min-height:45px;padding:10px 14px;border:1px solid #c8c4cb;border-radius:7px;background:#fff;color:#353038;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;line-height:1.4;cursor:pointer}
+.client-dialog-layer #dialog .huddle-invite-actions>.primary-button{border-color:#007a5a;background:#007a5a;color:#fff}
+.huddle-invite-actions>button:hover{background:#f4f2f6}
+.client-dialog-layer #dialog .huddle-invite-actions>.primary-button:hover{border-color:#006b50;background:#006b50}
+.huddle-invite-actions>button:disabled{opacity:.65;cursor:default}
+.huddle-invite-actions>button:focus-visible{outline:3px solid #63b597;outline-offset:3px}
+.huddle-invite-actions .sh-icon{width:18px;height:18px;flex:0 0 auto}
+.mobile-preview .huddle-invitation{gap:18px;padding:12px 0 0}
+.mobile-preview .huddle-invite-notification{width:calc(100% - 20px);padding:11px 12px;border-radius:16px}
+.mobile-preview .huddle-invite-sheet{width:100%;padding:16px 19px 23px;border:0;border-radius:23px 23px 0 0;box-shadow:0 -6px 25px #1d132028}
+.mobile-preview .huddle-invite-handle{margin-top:-5px;margin-bottom:18px}
+@media(max-width:540px){
+  .huddle-invitation{gap:15px;padding:11px 0 0}
+  .huddle-invite-notification{width:calc(100% - 20px);padding:10px 12px;border-radius:15px}
+  .huddle-invite-sheet{width:100%;padding:14px 18px 20px;border:0;border-radius:22px 22px 0 0}
+  .huddle-invite-heading{gap:8px}
+  .client-dialog-layer #dialog-content .huddle-invite-heading>h3{font-size:18px}
+  .huddle-invite-heading>.sh-icon{width:23px;height:23px}
+  .huddle-invite-handle,.mobile-preview .huddle-invite-handle{margin-bottom:15px}
+  .client-dialog-layer #dialog-content .huddle-invite-channel{font-size:13px;margin:5px 0 15px}
+  .huddle-invite-people{gap:20px;margin-bottom:18px}
+  .huddle-invite-avatar{width:46px;height:46px;min-width:46px;border-radius:9px}
+  .huddle-invite-actions>button,.client-dialog-layer #dialog .huddle-invite-actions>.primary-button{min-height:45px;font-size:13px}
+}
+@media(max-width:360px){
+  .huddle-invite-notification-copy>b,.client-dialog-layer #dialog-content .huddle-invite-notification-copy>p{font-size:12px}
+  .client-dialog-layer #dialog-content .huddle-invite-heading>h3{font-size:16px}
+  .huddle-invite-sheet,.mobile-preview .huddle-invite-sheet{padding-inline:16px}
+}

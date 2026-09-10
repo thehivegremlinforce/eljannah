@@ -1,0 +1,134 @@
+/* Work happens inside the client. The store stays visible beside it. */
+.slack-panel{overflow:hidden}
+.client-dialog-layer{position:absolute;inset:42px 0 0;z-index:30;display:flex;align-items:flex-start;justify-content:center;padding:20px 16px;background:rgba(29,28,29,.24);container-type:inline-size;overflow:hidden}
+.client-dialog-layer #dialog{position:relative;inset:auto;flex:0 1 600px;width:min(600px,100%);min-width:0;max-width:100%;max-height:min(100%,calc(100dvh - 95px));margin:0;padding:0;border:1px solid #c9c5ca;border-radius:10px;box-shadow:0 12px 32px #1d1c1d35;background:#fff;color:#1d1c1d;overflow:hidden;outline:0}
+.client-dialog-layer #dialog[open]{display:flex;flex-direction:column}
+.client-dialog-layer #dialog::backdrop{background:transparent;backdrop-filter:none}
+.client-dialog-layer #dialog .dialog-top{display:flex;flex-shrink:0;align-items:center;justify-content:space-between;gap:12px;margin:0;padding:12px 20px 4px;background:#fff}
+.client-dialog-layer #dialog .dialog-top .eyebrow{font-size:10px;line-height:1.4;letter-spacing:1px;color:#616061}
+.client-dialog-layer #dialog .dialog-top .icon-button{min-width:36px;width:36px;height:36px;background:transparent;color:#454245}
+.client-dialog-layer #dialog #dialog-title{flex-shrink:0;font:700 22px/1.3 Arial,Helvetica,sans-serif;padding:0 20px 16px;margin:0;border-bottom:1px solid #e5e2e6;overflow-wrap:anywhere;outline:0}
+.client-dialog-layer #dialog #dialog-content{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b8b3ba transparent;padding:18px 20px 24px;scroll-padding:16px}
+.client-dialog-layer #dialog-content>p:first-child{margin-top:0}
+.client-dialog-layer #dialog-content p{font-size:14px;line-height:1.55;color:#454245}
+.client-dialog-layer #dialog-content .feature-context{font-size:10px!important;line-height:1.5;letter-spacing:.55px;color:#616061!important;margin-bottom:14px}
+.client-dialog-layer #dialog .source-note{font-size:11px!important;line-height:1.5!important;padding:11px;background:#f6f5f6;color:#616061}
+.client-dialog-layer #dialog .primary-button,.client-dialog-layer #dialog .slack-button{max-width:100%;min-height:40px;font-size:13px;line-height:1.4;white-space:normal}
+.client-dialog-layer #dialog .dialog-actions{margin-top:16px;gap:9px}
+.client-dialog-layer #dialog .demo-login{margin:18px auto 0;padding:17px;max-width:360px}
+.client-dialog-layer #dialog .mfa-card{margin:16px 0;padding:22px 15px}
+.client-dialog-layer #dialog .detail-grid,.client-dialog-layer #dialog .evidence-grid{gap:10px;margin:16px 0}
+.client-dialog-layer #dialog .detail-tile{min-width:0;padding:14px;overflow-wrap:anywhere}
+.client-dialog-layer #dialog .detail-tile b,.client-dialog-layer #dialog .evidence-grid b{font-size:13px}
+.client-dialog-layer #dialog .detail-tile span,.client-dialog-layer #dialog .detail-tile small{font-size:12px;line-height:1.5}
+.client-dialog-layer #dialog .channel-picker{gap:8px;margin:16px 0}
+.client-dialog-layer #dialog .channel-picker button{min-height:69px;padding:10px}
+.client-dialog-layer #dialog .channel-picker button>span{left:10px;top:11px}
+.client-dialog-layer #dialog .channel-picker button b{font-size:12px;padding-left:18px}
+.client-dialog-layer #dialog .channel-picker button small{font-size:11px;padding-left:18px}
+.client-dialog-layer #dialog .list-row{font-size:12px;overflow-wrap:anywhere}
+.client-dialog-layer #dialog .huddle-room{background:#4a154b;color:#fff}
+.client-dialog-layer #dialog .huddle-notes{background:#ffffff12;color:#fff;border-color:#ffffff35}
+.client-dialog-layer #dialog .huddle-room p{color:#fff!important}
+.client-dialog-layer #dialog .huddle-room .primary-button{background:#fff;border-color:#fff;color:#4a154b}
+.client-dialog-layer #dialog .feature-form textarea,.client-dialog-layer #dialog .feature-form select,.client-dialog-layer #dialog .demo-login input{max-width:100%;font-size:15px;line-height:1.5}
+.client-dialog-layer #dialog .search-result{gap:10px;overflow-wrap:anywhere}
+.client-dialog-layer #dialog .search-result small{flex-shrink:0;font-size:11px}
+.client-dialog-layer #dialog .brief-answer{overflow-wrap:anywhere}
+.scene-activity{position:absolute;z-index:5;left:21px;top:117px;max-width:calc(100% - 42px);display:flex;align-items:center;gap:10px;padding:11px 14px;border:1px solid #c0d1ae;border-radius:8px;background:#ffffffed;box-shadow:0 4px 16px #233f1920;pointer-events:none}
+.scene-activity>.icon{width:24px;height:24px;color:#398329}
+.scene-activity>div{min-width:0}
+.scene-activity b{display:block;font-size:12px;line-height:1.4;color:#23442b}
+.scene-activity span:not(.activity-pulse){display:block;font-size:11px;line-height:1.5;margin-top:2px;color:#58734b}
+.scene-activity .activity-pulse{width:7px;height:7px;margin-left:5px;border-radius:50%;background:#5cbf1a;flex-shrink:0}
+.scene-activity.is-typing .activity-pulse{animation:phone-activity 1s ease-in-out infinite}
+@keyframes phone-activity{50%{box-shadow:0 0 0 5px #5cbf1a20}}
+.mobile-preview .client-dialog-layer{inset:39px 0 16px;padding:0;background:#fff}
+.mobile-preview .client-dialog-layer #dialog{flex:1;width:100%;height:100%;max-height:100%;max-width:100%;margin:0;border:0;border-radius:0;box-shadow:none}
+.mobile-preview .client-dialog-layer #dialog .dialog-top{padding:9px 14px 3px}
+.mobile-preview .client-dialog-layer #dialog .dialog-top .icon-button{height:42px;width:42px}
+.mobile-preview .client-dialog-layer #dialog #dialog-title{font-size:21px;padding:0 17px 15px}
+.mobile-preview .client-dialog-layer #dialog #dialog-content{padding:17px 16px 22px}
+.mobile-preview .client-dialog-layer #dialog .primary-button,.mobile-preview .client-dialog-layer #dialog .slack-button{min-height:44px;font-size:14px}
+.mobile-preview .client-dialog-layer #dialog .feature-form textarea,.mobile-preview .client-dialog-layer #dialog .feature-form select,.mobile-preview .client-dialog-layer #dialog .demo-login input{font-size:16px}
+.mobile-preview .client-dialog-layer #dialog .detail-grid,.mobile-preview .client-dialog-layer #dialog .evidence-grid{grid-template-columns:1fr}
+.mobile-preview .client-dialog-layer #dialog .canvas-preview{padding:13px}
+.mobile-preview .client-dialog-layer #dialog .channel-picker{grid-template-columns:1fr}
+.mobile-preview .client-dialog-layer #dialog .channel-picker button{min-height:61px}
+.mobile-preview .client-dialog-layer #dialog .channel-picker button b{font-size:13px}
+.mobile-preview .client-dialog-layer #dialog .channel-picker button small{font-size:12px}
+.mobile-preview .client-dialog-layer #dialog .list-row{grid-template-columns:1.25fr .65fr .8fr;gap:7px;padding:11px 8px;font-size:11px}
+@container(max-width:450px){
+  .client-dialog-layer #dialog .detail-grid,.client-dialog-layer #dialog .evidence-grid{grid-template-columns:1fr}
+  .client-dialog-layer #dialog #dialog-title{font-size:20px}
+  .client-dialog-layer #dialog .huddle-avatars{gap:17px}
+  .client-dialog-layer #dialog .huddle-avatars>span{width:48px;height:48px}
+  .client-dialog-layer #dialog .huddle-avatars small{top:57px}
+}
+@media(max-width:1050px){
+  .client-dialog-open .demo-grid>.scene-panel{grid-row:1;min-height:290px;height:290px;overflow:hidden}
+  .client-dialog-open .demo-grid>.slack-panel{grid-row:2}
+  .client-dialog-open .slack-panel{height:max(460px,calc(100dvh - 338px));min-height:0}
+  .client-dialog-open .scene-panel .scene-heading{top:12px;left:15px}
+  .client-dialog-open .scene-panel .scene-heading h2{font-size:25px}
+  .client-dialog-open .scene-panel .scene-heading .eyebrow{font-size:8px}
+  .client-dialog-open .scene-panel .scene-canvas{height:245px;min-height:245px}
+  .client-dialog-open .scene-panel .scene-activity{left:auto;right:12px;top:12px;padding:8px 10px;max-width:52%}
+  .client-dialog-open .scene-panel .scene-activity b{font-size:10px}
+  .client-dialog-open .scene-panel .scene-activity span:not(.activity-pulse){font-size:10px}
+  .client-dialog-open .scene-panel .scene-labels,.client-dialog-open .scene-panel .scene-summary,.client-dialog-open .scene-panel .scene-hint,.client-dialog-open .scene-panel .scene-toolbar{display:none}
+}
+@media(max-width:540px){
+  .client-dialog-layer{padding:9px;inset:42px 0 0}
+  .client-dialog-layer #dialog{max-height:100%;border-radius:7px}
+  .client-dialog-layer #dialog .dialog-top{padding:8px 12px 2px}
+  .client-dialog-layer #dialog #dialog-title{padding:0 13px 12px;font-size:20px}
+  .client-dialog-layer #dialog #dialog-content{padding:15px 13px 20px}
+  .client-dialog-layer #dialog .demo-login{padding:13px}
+  .client-dialog-layer #dialog .login-identity{gap:10px;margin-bottom:15px}
+  .client-dialog-layer #dialog .login-identity b{font-size:13px}
+  .client-dialog-layer #dialog .primary-button,.client-dialog-layer #dialog .slack-button{min-height:44px;font-size:13px}
+  .client-dialog-layer #dialog .feature-form textarea,.client-dialog-layer #dialog .feature-form select,.client-dialog-layer #dialog .demo-login input{font-size:16px}
+  .client-dialog-open .demo-grid>.scene-panel{min-height:180px;height:180px}
+  .client-dialog-open .scene-panel .scene-canvas{height:180px;min-height:180px}
+  .client-dialog-open .slack-panel,.client-dialog-open.mobile-preview .slack-panel{height:max(460px,calc(100dvh - 224px));min-height:0}
+  .client-dialog-open .scene-panel .scene-heading{display:none}
+  .client-dialog-open .scene-panel .scene-activity{top:8px;left:10px;right:auto;max-width:calc(100% - 20px);padding:7px 10px}
+  .client-dialog-open .scene-panel .scene-activity>.icon{width:18px;height:18px}
+  .mobile-preview .client-dialog-layer{inset:39px 0 16px;padding:0}
+  .mobile-preview .client-dialog-layer #dialog{border-radius:0}
+  .mobile-preview .client-dialog-layer #dialog #dialog-content{padding:15px 12px 20px}
+  .mobile-preview .client-dialog-layer #dialog #dialog-title{padding-left:13px;padding-right:13px;font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){.scene-activity.is-typing .activity-pulse{animation:none}}
+
+/* Compact forms keep readable text inside shorter laptop and phone clients. */
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .dialog-top{padding:4px 16px 0}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) #dialog-title{padding:0 16px 11px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) #dialog-content{padding:14px 16px 16px;scroll-padding:12px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) #dialog-content>p{margin-top:0;margin-bottom:10px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) #dialog-content p:not(.feature-context):not(.source-note):not(.media-caption):not(.signin-help){font-size:14px!important;line-height:1.5!important}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .feature-context{margin-bottom:10px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .primary-button,.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .slack-button{font-size:14px;min-height:44px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .demo-login{margin:12px auto;padding:14px;max-width:360px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .login-identity{margin-bottom:13px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .login-identity b{font-size:14px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .mfa-card{margin:12px 0;padding:16px 14px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .mfa-card>span{margin-bottom:9px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .dialog-actions{margin-top:12px;gap:8px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .feature-form textarea{min-height:104px;padding:9px 11px;margin:6px 0 10px;line-height:1.5}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .feature-form select,.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .demo-login input{min-height:44px;padding:9px 11px;margin:6px 0 10px;line-height:1.5}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .workforce-card{padding:14px;margin:12px 0}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .workforce-card h3{margin:6px 0 8px!important}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .workforce-card p{margin:8px 0}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .workforce-card>.person-label{margin:7px 0}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .agent-channel{padding:14px;margin:12px 0}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .agent-greeting{margin-bottom:12px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .detail-grid,.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .evidence-grid{gap:8px;margin:12px 0}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .detail-tile{padding:12px}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .detail-tile b,.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .detail-tile span,.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .evidence-grid b{font-size:14px;line-height:1.45}
+.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .source-note{margin:10px 0 0;padding:9px}
+@media(max-width:370px){
+  .client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) #dialog-content{padding:12px 12px 16px}
+  .client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) .dialog-top,.client-dialog-layer #dialog:not(.slack-huddle-dialog):not(.slack-huddle-invitation) #dialog-title{padding-left:12px;padding-right:12px}
+}

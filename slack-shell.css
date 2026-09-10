@@ -1,0 +1,405 @@
+/* Slack surfaces use Slack's visual language. The surrounding demo keeps the
+   El Jannah brand treatment. Load this file after connected-store.css. */
+.demo-grid{grid-template-columns:minmax(0,2fr) minmax(0,3fr)}
+.slack-panel{--slack-ink:#1d1c1d;--slack-muted:#616061;--slack-border:#dedcde;--slack-purple:#4a154b;--slack-lilac:#f0e8f1;--slack-active:#e4d5e7;--slack-link:#1264a3;--slack-green:#007a5a;isolation:isolate;position:relative;min-width:0;min-height:740px;height:740px;background:#fff;color:var(--slack-ink);font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.45}
+.slack-panel button,.slack-panel input,.slack-panel textarea,.slack-panel select{font-family:inherit}
+.slack-panel a,.slack-panel .text-button{color:var(--slack-link)}
+.slack-panel button:focus-visible,.slack-panel a:focus-visible,.slack-panel input:focus-visible,.slack-panel textarea:focus-visible,.slack-panel select:focus-visible{outline:3px solid #1264a3;outline-offset:2px}
+.slack-panel .slack-topbar{height:42px;min-height:42px;padding:6px 12px;gap:12px;background:#350d36;color:#fff}
+.slack-panel .slack-topbar>.slack-symbol{font-size:26px;width:26px;text-align:center}
+.slack-panel .slack-search{min-width:0;height:28px;min-height:28px;margin:0;justify-content:flex-start;padding:0 10px;background:#ffffff26;border:1px solid #ffffff30;border-radius:6px;color:#f9f3fa;font-size:13px}
+.slack-panel .slack-search .icon{width:16px;height:16px}
+.slack-panel .profile-mini{width:28px;height:28px;font-size:11px;background:#c6d6df;color:#294c5f;border-radius:6px}
+.slack-panel .slack-body{position:relative;min-width:0;min-height:0;flex:1;overflow:hidden}
+.slack-panel .workspace-rail{width:56px;min-width:56px;padding:14px 5px 12px;gap:20px;background:#4a154b;color:#f7edf7}
+.slack-panel .workspace-avatar{width:34px;height:34px;margin-bottom:1px;border:1px solid #ffffff5c;border-radius:9px;background:#fff;color:#114734;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:800;letter-spacing:-1px}
+.slack-panel .rail-button{width:46px;min-height:44px;color:#eedfee;font-size:10px;line-height:1.2;gap:5px}
+.slack-panel .rail-button .icon{width:29px;height:29px;padding:5px}
+.slack-panel .rail-button.selected .icon{background:#ffffff30;border-radius:8px}
+.slack-panel .rail-button:hover .icon{background:#ffffff20;border-radius:8px}
+.slack-panel .channel{min-width:0;min-height:0;background:#fff;overflow:hidden}
+.slack-panel .channel-heading{min-height:76px;padding:10px 16px;gap:10px;border-bottom:1px solid #512052;background:#4a154b;color:#fff;flex-shrink:0}
+.slack-panel .channel-heading strong{font-size:17px;line-height:1.3;letter-spacing:-.2px}
+.slack-panel .hash{font-size:22px;font-weight:600;color:#1d1c1d}
+.slack-panel .channel-chevron{font-size:18px;color:#616061}
+.slack-panel .channel-head-actions{gap:7px!important;flex-shrink:0}
+.slack-panel .icon-button{width:34px;height:34px;color:#454245;border-color:transparent;border-radius:5px}
+.slack-panel .icon-button:hover{background:#f3f2f3}
+.slack-panel .avatar-stack{margin:0 5px 0 0}
+.slack-panel .avatar-stack i{width:23px;height:26px;font-size:8px}
+.slack-panel .channel-tabs{height:43px;min-height:43px;padding:0 16px;gap:20px;border-bottom:1px solid #dedcde;background:#fff;overflow-x:auto;scrollbar-width:none}
+.slack-panel .channel-tabs::-webkit-scrollbar{display:none}
+.slack-panel .channel-tabs button{min-height:42px;padding:0 0 2px;font-size:13px;gap:6px;color:#616061}
+.slack-panel .channel-tabs .icon{width:15px;height:15px}
+.slack-panel .channel-tabs button.active{color:#4a154b;font-weight:700}
+.slack-panel .channel-tabs button.active:after{height:3px;background:#4a154b;border-radius:3px 3px 0 0}
+.slack-panel .channel-content{flex:1;height:auto;min-height:0;max-height:none;padding:18px 16px 12px;background:#fff;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b7b2b8 transparent}
+.slack-panel .date-divider{font-size:12px;margin:0 0 23px;gap:0;color:#1d1c1d}
+.slack-panel .date-divider:before,.slack-panel .date-divider:after{background:#dedcde}
+.slack-panel .date-divider span{padding:5px 12px;border-color:#dedcde;background:#fff;font-weight:700}
+.slack-panel .message{gap:10px;margin-bottom:22px;max-width:none}
+.slack-panel .message-avatar{width:36px;height:36px;font-size:12px;border-radius:8px}
+.slack-panel .message-avatar.app{background:#4a154b;color:white;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+.slack-panel .message-avatar.claude{background:#d9a991;color:#4b291d;font-size:15px}
+.slack-panel .message-author{gap:6px;margin:0 0 4px;line-height:1.3}
+.slack-panel .message-author b{font-size:14px;color:#1d1c1d}
+.slack-panel .message-author time{font-size:11px;color:#616061}
+.slack-panel .app-tag{padding:1px 4px;font-size:9px;background:#f0eff0;color:#616061;border-radius:3px}
+.slack-panel .message p,.slack-panel .workflow-card>p{font-size:14px;line-height:1.5;color:#1d1c1d;overflow-wrap:anywhere}
+.slack-panel .mention{background:#e8f3fa;color:#1264a3}
+.slack-panel .workflow-card{padding:14px;margin-top:12px;border:1px solid #dedcde;border-left:4px solid #868686;border-radius:7px;background:#fff}
+.slack-panel .workflow-card.complete{border-left-color:#007a5a;background:#fff}
+.slack-panel .workflow-card .card-kicker{font-size:10px;letter-spacing:.35px;line-height:1.5;color:#616061;margin-bottom:8px}
+.slack-panel .workflow-card.complete .card-kicker{color:#007a5a}
+.slack-panel .workflow-card h3{font-size:16px;line-height:1.35;margin-bottom:8px;color:#1d1c1d}
+.slack-panel .metric-row{gap:18px;padding:12px 0;border-color:#e7e5e7;margin:14px 0}
+.slack-panel .metric-row>div{min-width:0}
+.slack-panel .metric-row strong{font-size:26px;line-height:1.15;color:#1d1c1d;overflow-wrap:anywhere}
+.slack-panel .metric-row small{font-size:11px;line-height:1.45;color:#616061}
+.slack-panel .metric-row>div:last-child strong{font-size:15px;line-height:1.35;margin-top:3px}
+.slack-panel .workflow-actions{gap:8px;margin-top:13px}
+.slack-panel .slack-button,.slack-panel .primary-button{max-width:100%;min-height:36px;padding:7px 12px;border:1px solid #b9b7b9;border-radius:5px;background:#fff;color:#1d1c1d;font-size:13px;font-weight:700;line-height:1.3;text-align:center}
+.slack-panel .slack-button.primary,.slack-panel .primary-button{background:#007a5a;border-color:#007a5a;color:#fff}
+.slack-panel .slack-button:hover{background:#f4f3f4}
+.slack-panel .slack-button.primary:hover,.slack-panel .primary-button:hover{background:#00664c;border-color:#00664c}
+.slack-panel .slack-button:disabled,.slack-panel .primary-button:disabled{background:#f0eff0;border-color:#dedcde;color:#616061}
+.slack-panel .slack-button .icon,.slack-panel .primary-button .icon{width:15px;height:15px}
+.slack-panel .message-source{font-size:11px;line-height:1.5;color:#616061;margin-top:12px;overflow-wrap:anywhere}
+.slack-panel .message-reactions{gap:5px;margin-top:9px;flex-wrap:wrap}
+.slack-panel .reaction{min-height:28px;padding:3px 9px;border:1px solid #ded3e1;border-radius:15px;background:#f5eff6;color:#4a154b;font-size:12px;line-height:1.4}
+.slack-panel .reaction[aria-pressed=true]{background:#eee1f0;border-color:#815687;color:#4a154b}
+.slack-panel .composer{margin:8px 16px 0;padding:10px 12px 7px;border:1px solid #aaa7ab;border-radius:8px;background:#fff;flex-shrink:0}
+.slack-panel .composer:focus-within{border-color:#616061;box-shadow:0 0 0 1px #616061}
+.slack-panel .composer input{padding:5px 0 15px;min-height:36px;font-size:14px;color:#1d1c1d;background:#fff}
+.slack-panel .composer input::placeholder{color:#616061;opacity:1}
+.slack-panel .composer-tools{gap:12px;font-size:17px;color:#616061;min-width:0}
+.slack-panel .composer button{width:32px;height:30px;background:#007a5a;color:#fff;border-radius:5px;flex-shrink:0}
+.slack-panel .composer button .icon{width:17px;height:17px}
+.slack-panel .local-note{font-size:10px;line-height:1.4;color:#616061;padding:7px 8px 9px;flex-shrink:0;background:#fff}
+.slack-panel .eyebrow{font-size:10px;letter-spacing:.8px;color:#616061}
+.slack-panel .channel-content .hub-heading{font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.2;font-weight:750;color:#1d1c1d;margin:5px 0 12px}
+.slack-panel .hub-intro,.slack-panel .hub-card p{font-size:14px;line-height:1.5;color:#616061}
+.slack-panel .hub-card{padding:14px;margin-top:12px;border:1px solid #dedcde;border-radius:7px;background:#fff}
+.slack-panel .hub-card h3{font-size:15px;line-height:1.4;color:#1d1c1d;margin-bottom:8px}
+.slack-panel .hub-card .icon{color:#616061}
+.slack-panel .check-row{font-size:14px;line-height:1.5;padding:13px 0;border-color:#e7e5e7;gap:10px}
+.slack-panel .check-row input{width:18px;height:18px;accent-color:#007a5a;flex-shrink:0}
+.slack-panel .progress-track{background:#eeecee}
+.slack-panel .progress-track>span{background:#007a5a}
+.slack-panel .task-status{font-size:12px;color:#616061}
+.slack-panel .related-playbooks{padding:13px;border:1px solid #dedcde;border-radius:7px;background:#fff}
+.slack-panel .related-playbooks>b{font-size:13px;line-height:1.4;color:#1d1c1d}
+.slack-panel .related-playbooks button{min-height:40px;border-color:#e7e5e7;color:#1264a3;font-size:13px;line-height:1.4;gap:8px}
+.slack-panel .readonly-label,.slack-panel .feature-context{color:#616061;font-size:11px;line-height:1.5}
+.slack-panel .feature-result{border-color:#bbdbd0;background:#f2faf7;color:#11634a;font-size:13px;line-height:1.5}
+.slack-panel .feature-form label,.slack-panel .demo-login label{font-size:14px;color:#1d1c1d}
+.slack-panel .feature-form textarea,.slack-panel .feature-form select,.slack-panel .demo-login input{max-width:100%;font-size:14px;line-height:1.5;border-color:#aaa7ab;color:#1d1c1d;background:white}
+.slack-panel .form-note,.slack-panel .source-note{font-size:12px;line-height:1.5;color:#616061}
+.expanded .slack-panel{height:780px;min-height:740px}
+.expanded .slack-panel .channel-content{max-height:none}
+.expanded .slack-panel .channel-heading strong{font-size:18px}
+.slack-panel .slack-history{display:flex;align-items:center;gap:12px;color:#e3d4e4;padding:0 5px;font-size:19px;flex-shrink:0}
+.slack-panel .slack-history .icon{width:17px;height:17px}
+.slack-panel .slack-help{background:none;border:0;color:#f7edf7;width:25px;height:27px;padding:3px;display:flex;align-items:center;justify-content:center}
+.slack-panel .window-controls{font-size:13px;letter-spacing:8px;white-space:nowrap;color:#dccbdc;margin-right:-7px}
+.slack-panel .more-dots{font-size:17px;letter-spacing:2px;line-height:29px}
+.slack-panel .rail-bottom{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:auto}
+.slack-panel .rail-create{width:31px;height:31px;padding:5px;border:0;border-radius:50%;background:#ffffff20;color:#fff}
+.slack-panel .rail-bottom .profile-mini{border:1px solid #ffffff75}
+.slack-panel .channel-sidebar{width:160px;min-width:160px;flex-shrink:0;padding:0 0 14px;background:#f0e8f1;border-right:1px solid #e2d7e4;color:#3c2b3e;overflow-x:hidden;overflow-y:auto;scrollbar-width:thin}
+.slack-panel .workspace-heading{height:56px;display:flex;align-items:center;justify-content:space-between;padding:9px 10px;gap:4px;border-bottom:1px solid #e3d8e5}
+.slack-panel .workspace-heading button{display:flex;gap:6px;align-items:center;padding:4px 0;background:none;border:0;color:#2f2030;font-size:15px;min-width:0;white-space:nowrap}
+.slack-panel .workspace-heading button:last-child{width:21px;justify-content:center;font-size:13px;letter-spacing:1px}
+.slack-panel .workspace-heading b{font-size:16px;font-weight:750;letter-spacing:-.4px}
+.slack-panel .workspace-shortcuts{padding:12px 5px 8px;display:grid;gap:2px}
+.slack-panel .workspace-shortcuts button,.slack-panel .sidebar-app{width:100%;display:flex;align-items:center;gap:8px;min-height:31px;padding:6px 9px;background:none;border:0;color:#493b4b;font-size:13px;line-height:1.35;text-align:left;white-space:nowrap}
+.slack-panel .workspace-shortcuts button:hover,.slack-panel .sidebar-app:hover{background:#e7dcea;border-radius:5px}
+.slack-panel .workspace-shortcuts .icon,.slack-panel .sidebar-app>.icon{width:16px;height:16px}
+.slack-panel .sidebar-section-label{display:flex;align-items:center;gap:7px;padding:13px 13px 6px;color:#6c5c6d;font-size:12px;line-height:1.4}
+.slack-panel .sidebar-section-label>span{font-size:16px;line-height:1}
+.slack-panel .sidebar-section-label small{margin-left:auto;font-size:10px}
+.slack-panel .desktop-channel-list{display:grid;gap:1px;padding:0 5px}
+.slack-panel .workspace-channel-row{display:flex;align-items:center;gap:8px;min-width:0;min-height:31px;width:100%;padding:6px 9px;border:0;border-radius:5px;text-align:left;background:transparent;color:#493b4b;font-size:13px;line-height:1.35}
+.slack-panel .workspace-channel-row:hover{background:#e7dcea}
+.slack-panel .workspace-channel-row.selected{background:#decde4;color:#3b1940;font-weight:700}
+.slack-panel .workspace-channel-hash{font-size:17px;line-height:1;flex-shrink:0;color:#766778}
+.slack-panel .workspace-channel-text{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.slack-panel .workspace-channel-text b{font-size:13px;font-weight:400;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.slack-panel .workspace-channel-row.selected b{font-weight:700}
+.slack-panel .desktop-channel-list .workspace-channel-text small{display:none}
+.slack-panel .sidebar-app{padding-left:14px}
+.slack-panel .app-avatar{width:19px;height:19px;display:inline-flex;align-items:center;justify-content:center;border-radius:4px;background:#fff;color:#114734;font-size:9px;font-weight:800;flex-shrink:0}
+.slack-panel .sidebar-scope{font-size:10px;line-height:1.4;color:#7a6c7c;margin:20px 14px 0}
+.slack-panel .slack-back,.slack-panel .mobile-channel-members,.slack-panel .mobile-bottom-nav,.slack-panel .phone-home-indicator,.slack-panel .mobile-format{display:none}
+.slack-panel .channel-title-group{display:block;flex:1;min-width:0}
+.slack-panel .channel-title-group>div{display:flex;align-items:center;gap:6px;min-width:0}
+.slack-panel .channel-huddle{border:1px solid #d7d4d7;border-radius:6px}
+.slack-panel .composer-format{display:flex;align-items:center;gap:16px!important;justify-content:flex-start!important;min-height:28px;margin:-3px 0 2px;color:#616061;font-size:14px}
+.slack-panel .composer-format>span{font-size:13px}
+.slack-panel .composer-bottom{gap:8px}
+.slack-panel .composer-plus{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;background:#f1eff1;border-radius:50%;font-size:21px;color:#454245}
+.slack-panel .composer-tool-divider{font-size:16px;color:#b7b3b7}
+.slack-panel .composer-tools .icon{width:17px;height:17px}
+.slack-panel.showing-home .channel{display:none}
+.slack-panel .slack-home{display:flex;flex-direction:column;flex:1;min-width:0;min-height:0;background:#fff;overflow:hidden}
+.slack-panel .mobile-workspace-heading{display:flex;align-items:center;gap:11px;min-height:66px;padding:13px 18px;color:#1d1c1d;background:#fff}
+.slack-panel .mobile-workspace-heading .workspace-avatar{margin:0;background:#f0e8f1;border-color:#e0d2e2}
+.slack-panel .mobile-workspace-heading h3{font-size:22px;line-height:1.2;letter-spacing:-.4px;font-weight:750;margin:0;flex:1}
+.slack-panel .mobile-workspace-heading h3>span{font-weight:400;font-size:19px;margin-left:3px}
+.slack-panel .mobile-workspace-heading .profile-mini{border:0}
+.slack-panel .mobile-search{display:flex;align-items:center;gap:10px;min-height:42px;margin:0 18px 16px;padding:9px 12px;border:1px solid #dedcde;border-radius:8px;background:#f6f5f6;color:#616061;text-align:left;font-size:15px}
+.slack-panel .mobile-search .icon{width:20px;height:20px}
+.slack-panel .mobile-shortcuts{display:flex;gap:10px;padding:16px 18px;background:#fff;border-top:1px solid #eeecee;border-bottom:1px solid #eeecee}
+.slack-panel .mobile-shortcuts button{display:flex;align-items:flex-start;justify-content:center;flex-direction:column;gap:10px;min-height:92px;flex:1;padding:14px 16px;background:#fff;border:1px solid #e3dfe4;border-radius:15px;color:#1d1c1d;text-align:left}
+.slack-panel .mobile-shortcuts button:first-child{background:#f8f3f9;color:#4a154b}
+.slack-panel .mobile-shortcuts .icon{width:23px;height:23px}
+.slack-panel .mobile-shortcuts b{font-size:15px}
+.slack-panel .mobile-home-content{padding:7px 18px 20px;min-height:0;flex:1;overflow:auto;background:#fff;scrollbar-width:thin}
+.slack-panel .mobile-section-heading{display:flex;align-items:baseline;gap:8px;justify-content:space-between;padding:17px 0 9px}
+.slack-panel .mobile-section-heading h4{margin:0;font-size:15px;line-height:1.35}
+.slack-panel .mobile-section-heading>span{font-size:11px;color:#616061;text-align:right}
+.slack-panel .mobile-store-return{display:flex;align-items:center;gap:11px;width:100%;min-height:64px;padding:11px 0;border:0;border-bottom:1px solid #e7e5e7;background:white;text-align:left;color:#1d1c1d}
+.slack-panel .mobile-store-return>.icon{width:22px;height:22px}
+.slack-panel .mobile-store-return>span:nth-child(2){min-width:0;flex:1}
+.slack-panel .mobile-store-return b{display:block;font-size:15px;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.slack-panel .mobile-store-return small{display:block;margin-top:3px;font-size:12px;color:#616061}
+.slack-panel .mobile-store-return>span:last-child{font-size:24px;color:#616061}
+.slack-panel .mobile-channel-list{display:grid;gap:2px;margin:0 -7px}
+.slack-panel .mobile-channel-list .workspace-channel-row{min-height:52px;padding:10px 8px;gap:11px;color:#1d1c1d;font-size:15px}
+.slack-panel .mobile-channel-list .workspace-channel-text b{font-size:15px}
+.slack-panel .mobile-channel-list .workspace-channel-text small{display:block;font-size:12px;color:#616061;margin-top:3px;overflow:hidden;text-overflow:ellipsis}
+.slack-panel .mobile-channel-list .workspace-channel-hash{font-size:23px;color:#616061}
+
+.mobile-preview .slack-panel,.mobile-preview.expanded .slack-panel{width:min(420px,calc(100% - 30px));height:850px;min-height:0;margin:24px 0;border:7px solid #262329;border-radius:36px;box-shadow:0 15px 35px #25202728;overflow:hidden;justify-self:center;align-self:start;background:#fff}
+.mobile-preview .slack-panel .phone-status{display:flex;position:relative;align-items:center;justify-content:space-between;min-height:39px;height:39px;padding:8px 17px 4px;background:#fff;color:#1d1c1d;font-family:Arial,Helvetica,sans-serif;font-size:12px;flex-shrink:0}
+.mobile-preview .slack-panel .phone-status>b{font-size:13px}
+.mobile-preview .slack-panel .phone-island{width:88px;height:22px;top:4px;background:#262329;border-radius:14px}
+.mobile-preview .slack-panel .phone-connectivity{display:block;width:50px;height:17px}
+.mobile-preview .slack-panel .phone-connectivity svg{display:block;width:100%;height:100%}
+.mobile-preview .slack-panel .slack-topbar,.mobile-preview .slack-panel .workspace-rail,.mobile-preview .slack-panel .channel-sidebar{display:none}
+.mobile-preview .slack-panel .slack-body{min-height:0;overflow:hidden}
+.mobile-preview .slack-panel .channel-heading{min-height:68px;padding:6px 10px 8px 3px;gap:4px}
+.mobile-preview .slack-panel .slack-back{display:inline-flex;width:38px;min-width:38px;height:44px;padding:7px}
+.mobile-preview .slack-panel .slack-back .icon{width:25px;height:25px}
+.mobile-preview .slack-panel .channel-title-group{display:block;flex:1;min-width:0}
+.mobile-preview .slack-panel .channel-title-group>div{gap:5px}
+.mobile-preview .slack-panel .channel-heading strong{font-size:17px;line-height:1.3;letter-spacing:-.3px}
+.mobile-preview .slack-panel .hash{font-size:21px}
+.mobile-preview .slack-panel .channel-chevron{display:none}
+.mobile-preview .slack-panel .mobile-channel-members{display:block;padding-left:18px;margin-top:3px;font-size:12px;line-height:1.3;color:#616061}
+.mobile-preview .slack-panel .channel-head-actions{gap:0!important}
+.mobile-preview .slack-panel .avatar-stack,.mobile-preview .slack-panel #expand-slack{display:none}
+.mobile-preview .slack-panel .channel-huddle{display:inline-flex;width:40px;height:44px;border:0;background:transparent}
+.mobile-preview .slack-panel .channel-huddle .icon{width:24px;height:24px}
+.mobile-preview .slack-panel .channel-tabs{min-height:44px;height:44px;padding:0 12px;gap:19px}
+.mobile-preview .slack-panel .channel-tabs button{min-height:44px;font-size:12px;gap:5px}
+.mobile-preview .slack-panel .channel-tabs .icon{width:14px;height:14px}
+.mobile-preview .slack-panel .channel-content{flex:1;min-height:0;max-height:none;height:auto;padding:17px 12px 10px}
+.mobile-preview .slack-panel .date-divider{font-size:11px;margin-bottom:22px}
+.mobile-preview .slack-panel .date-divider span{padding:4px 10px}
+.mobile-preview .slack-panel .message{gap:9px;margin-bottom:23px}
+.mobile-preview .slack-panel .message-avatar{width:34px;height:34px;font-size:12px;border-radius:7px}
+.mobile-preview .slack-panel .message-author b{font-size:15px}
+.mobile-preview .slack-panel .message-author time{font-size:11px}
+.mobile-preview .slack-panel .message p,.mobile-preview .slack-panel .workflow-card>p{font-size:15px;line-height:1.5}
+.mobile-preview .slack-panel .workflow-card{padding:12px;margin-top:11px;border-left-width:3px}
+.mobile-preview .slack-panel .workflow-card h3{font-size:16px;line-height:1.35}
+.mobile-preview .slack-panel .workflow-card .card-kicker{font-size:10px;line-height:1.4;letter-spacing:0}
+.mobile-preview .slack-panel .metric-row{gap:12px;flex-wrap:wrap;margin:12px 0}
+.mobile-preview .slack-panel .metric-row strong{font-size:25px}
+.mobile-preview .slack-panel .metric-row>div:last-child strong{font-size:14px}
+.mobile-preview .slack-panel .metric-row small{font-size:11px;line-height:1.5}
+.mobile-preview .slack-panel .slack-button,.mobile-preview .slack-panel .primary-button{min-height:44px;padding:9px 11px;font-size:13px;line-height:1.4}
+.mobile-preview .slack-panel .message-source{font-size:11px;line-height:1.5}
+.mobile-preview .slack-panel .reaction{min-height:32px;padding:5px 9px;font-size:12px}
+.mobile-preview .slack-panel .composer{margin:6px 10px 0;padding:8px 10px 7px;border-color:#cecbcf;border-radius:13px;flex-shrink:0}
+.mobile-preview .slack-panel .composer-format{display:none}
+.mobile-preview .slack-panel .composer input{font-size:16px;min-height:36px;padding:4px 0 12px}
+.mobile-preview .slack-panel .composer-tools{gap:13px;font-size:19px}
+.mobile-preview .slack-panel .composer-tools .icon{width:19px;height:19px}
+.mobile-preview .slack-panel .composer-tool-divider{display:none}
+.mobile-preview .slack-panel .mobile-format{display:inline;font-size:14px}
+.mobile-preview .slack-panel .composer button{width:36px;height:34px}
+.mobile-preview .slack-panel .local-note{font-size:10px;line-height:1.35;padding:6px 8px 5px}
+.mobile-preview .slack-panel .phone-home-indicator{display:block;height:16px;min-height:16px;position:relative;background:#fff;flex-shrink:0}
+.mobile-preview .slack-panel .phone-home-indicator:after{content:'';position:absolute;left:50%;bottom:5px;transform:translateX(-50%);width:108px;height:4px;border-radius:5px;background:#1d1c1d}
+.mobile-preview .slack-panel .hub-intro,.mobile-preview .slack-panel .hub-card p{font-size:15px;line-height:1.5}
+.mobile-preview .slack-panel .hub-card h3{font-size:16px;line-height:1.4}
+.mobile-preview .slack-panel .check-row{font-size:15px;line-height:1.5;min-height:44px}
+.mobile-preview .slack-panel .related-playbooks>b{font-size:14px}
+.mobile-preview .slack-panel .related-playbooks button{font-size:14px;min-height:44px}
+.mobile-preview .slack-panel.showing-home .phone-status{background:#7e2e86;color:#fff}
+.mobile-preview .slack-panel .slack-home{background:#7e2e86}
+.mobile-preview .slack-panel .mobile-workspace-heading{min-height:69px;padding:12px 16px;background:#7e2e86;color:white}
+.mobile-preview .slack-panel .mobile-workspace-heading h3{font-size:24px;letter-spacing:-.3px}
+.mobile-preview .slack-panel .mobile-workspace-heading .workspace-avatar{width:35px;height:35px;background:#fff;border-color:#fff}
+.mobile-preview .slack-panel .mobile-workspace-heading .profile-mini{width:31px;height:31px}
+.mobile-preview .slack-panel .mobile-search{margin:0 15px 18px;padding:10px 13px;min-height:43px;background:#ffffff32;border-color:#ffffff10;color:#fff;font-size:16px;border-radius:9px}
+.mobile-preview .slack-panel .mobile-shortcuts{padding:17px 15px 18px;border-radius:17px 17px 0 0;border-top:0;border-bottom:1px solid #e8e5e9}
+.mobile-preview .slack-panel .mobile-shortcuts button{min-height:99px;padding:15px}
+.mobile-preview .slack-panel .mobile-shortcuts b{font-size:16px}
+.mobile-preview .slack-panel .mobile-home-content{padding:7px 15px 16px}
+.mobile-preview .slack-panel .mobile-section-heading h4{font-size:16px}
+.mobile-preview .slack-panel .mobile-section-heading>span{font-size:11px}
+.mobile-preview .slack-panel .mobile-channel-list .workspace-channel-row{font-size:16px;min-height:54px}
+.mobile-preview .slack-panel .mobile-channel-list .workspace-channel-text b{font-size:16px}
+.mobile-preview .slack-panel .mobile-bottom-nav{display:flex;align-items:center;justify-content:space-around;min-height:61px;padding:6px 5px 2px;flex-shrink:0;background:#fff;border-top:1px solid #dedcde}
+.mobile-preview .slack-panel .mobile-bottom-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:48px;min-width:55px;padding:3px 8px;border:0;border-radius:8px;background:transparent;color:#616061;font-size:10px;font-weight:600}
+.mobile-preview .slack-panel .mobile-bottom-nav .icon{width:25px;height:25px;padding:1px}
+.mobile-preview .slack-panel .mobile-bottom-nav .selected{color:#4a154b}
+.mobile-preview .slack-panel .mobile-bottom-nav .selected>.icon{background:#f0e5f2;border-radius:7px;box-shadow:0 0 0 3px #f0e5f2}
+.mobile-preview .slack-panel .mobile-bottom-nav .profile-mini{width:23px;height:23px;font-size:9px;margin:1px}
+.slack-panel .desktop-channel-list .workspace-channel-row.selected{background:#84388c;color:#fff}
+.slack-panel .desktop-channel-list .workspace-channel-row.selected .workspace-channel-hash{color:#fff}
+
+.slack-dialog{font-family:Arial,Helvetica,sans-serif;background:#fff;border:1px solid #dedcde;border-radius:12px;color:#1d1c1d;box-shadow:0 18px 65px #1d1c1d33}
+.slack-dialog h2{font-family:Arial,Helvetica,sans-serif;font-size:24px;font-weight:750;line-height:1.25;letter-spacing:-.4px;color:#1d1c1d;margin:12px 0 18px}
+.slack-dialog h3{font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.4;color:#1d1c1d}
+.slack-dialog #dialog-content p,.slack-dialog #dialog-content li,.slack-dialog .feature-form label,.slack-dialog .demo-login label{font-size:15px;line-height:1.55;color:#1d1c1d}
+.slack-dialog #dialog-content .source-note,.slack-dialog #dialog-content .form-note{font-size:13px!important;line-height:1.5;color:#616061}
+.slack-dialog .dialog-top .eyebrow,.slack-dialog #dialog-content .feature-context{font-size:11px!important;line-height:1.5;letter-spacing:.55px;color:#616061}
+.slack-dialog .primary-button{min-height:42px;padding:10px 14px;border:1px solid #007a5a;background:#007a5a;color:white;font-size:14px;line-height:1.4}
+.slack-dialog .primary-button:hover{background:#00664c;border-color:#00664c}
+.slack-dialog .primary-button:disabled{background:#f0eff0;border-color:#dedcde;color:#616061}
+.slack-dialog .slack-button{min-height:40px;padding:9px 12px;background:#fff;border-color:#b9b7b9;color:#1d1c1d;font-size:14px;line-height:1.4}
+.slack-dialog .slack-button:hover,.slack-dialog .icon-button:hover{background:#f3f2f3}
+.slack-dialog a,.slack-dialog .text-button{color:#1264a3}
+.slack-dialog .feature-form textarea,.slack-dialog .feature-form select,.slack-dialog .demo-login input{font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;border-color:#aaa7ab;background:white;color:#1d1c1d}
+.slack-dialog .canvas-preview,.slack-dialog .detail-tile,.slack-dialog .hub-card,.slack-dialog .channel-preview,.slack-dialog .agent-channel,.slack-dialog .demo-login,.slack-dialog .mfa-card,.slack-dialog .evidence-grid>div{background:#fff;border-color:#dedcde;color:#1d1c1d}
+.slack-dialog .detail-tile b,.slack-dialog .hub-card h3,.slack-dialog .list-row,.slack-dialog .evidence-grid b{font-size:14px;line-height:1.5;color:#1d1c1d}
+.slack-dialog .detail-tile span,.slack-dialog .detail-tile small,.slack-dialog .evidence-grid small,.slack-dialog .readonly-label{font-size:13px;line-height:1.5;color:#616061}
+.slack-dialog .feature-result{background:#f3faf7;border-color:#bfdbcf;color:#11634a;font-size:14px;line-height:1.5}
+.slack-dialog .channel-picker button{background:#fff;border-color:#dedcde;color:#1d1c1d}
+.slack-dialog .channel-picker button[aria-pressed=true]{background:#f2eaf4;border-color:#8d6894}
+.slack-dialog .channel-picker button b{font-size:13px}
+.slack-dialog .channel-picker small{font-size:12px;color:#616061}
+.slack-dialog .huddle-room{background:#f5eef7;border-color:#decde4}
+.slack-dialog .huddle-notes{background:#fff;border-color:#dedcde;color:#1d1c1d}
+.slack-dialog .step-list li:before{background:#f0e8f1;color:#4a154b;border-color:#e0d3e3}
+.slack-dialog .step-list span{font-size:14px;line-height:1.5;color:#616061}
+.slack-dialog .message-avatar.app{background:#4a154b;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+.slack-dialog .brief-answer{background:#f5f0f7;border-color:#e3d6e6;color:#3e2942;font-size:15px;line-height:1.5}
+.slack-dialog .search-input{font-size:16px;border-color:#aaa7ab}
+.slack-dialog .search-result{font-size:14px;line-height:1.5;border-color:#dedcde;color:#1d1c1d;background:#fff}
+.slack-dialog .search-result:hover{background:#f7f3f8}
+.slack-dialog .search-result small{font-size:12px;color:#616061}
+.slack-dialog .shell-sample-message{display:flex;gap:12px;align-items:flex-start;padding:17px 0;border-bottom:1px solid #e7e5e7}
+.slack-dialog .shell-sample-message>.message-avatar{width:36px;height:36px;flex-shrink:0;font-size:12px}
+.slack-dialog .shell-sample-message>div{min-width:0;flex:1}
+.slack-dialog .shell-sample-message b{font-size:15px}
+.slack-dialog .shell-sample-message p{margin:5px 0 0}
+.slack-dialog .shell-sample-message small{font-size:12px;color:#616061}
+.slack-dialog .shell-teammates{display:grid;gap:1px;border:1px solid #dedcde;border-radius:8px;overflow:hidden}
+.slack-dialog .shell-teammate{display:flex;align-items:center;gap:12px;min-height:71px;padding:13px 15px;border:0;border-bottom:1px solid #e7e5e7;background:white;text-align:left;width:100%}
+.slack-dialog .shell-teammate:last-child{border-bottom:0}
+.slack-dialog .shell-teammate:hover{background:#f8f5f9}
+.slack-dialog .shell-teammate .message-avatar{width:36px;height:36px;font-size:12px;flex-shrink:0}
+.slack-dialog .shell-teammate>span:nth-child(2),.slack-dialog .shell-teammate>div{min-width:0;flex:1}
+.slack-dialog .shell-teammate b{display:block;font-size:15px;line-height:1.4}
+.slack-dialog .shell-teammate small{display:block;font-size:12px;line-height:1.4;color:#616061;margin-top:3px}
+.slack-dialog .shell-teammate>.icon{color:#616061;width:18px;height:18px;margin-left:auto}
+.slack-dialog .shell-activity-item{padding:16px 0;border-bottom:1px solid #e7e5e7}
+.slack-dialog .shell-activity-item:last-child{border-bottom:0}
+.slack-dialog .shell-activity-item b{font-size:15px;color:#1d1c1d}
+.slack-dialog .shell-activity-item p{margin:5px 0}
+.slack-dialog .shell-activity-item small{font-size:12px;color:#616061}
+.slack-dialog .shell-profile{display:flex;align-items:center;gap:16px;padding:15px 0 22px}
+.slack-dialog .shell-profile>.message-avatar{width:62px;height:62px;font-size:20px;border-radius:12px}
+.slack-dialog .shell-profile>div{min-width:0}
+.slack-dialog .shell-profile h3{font-size:23px;margin:0 0 4px}
+.slack-dialog .shell-profile p{margin:0;color:#616061}
+
+@media(max-width:1050px){
+  .demo-grid{grid-template-columns:minmax(0,1fr)}
+  .demo-grid>.slack-panel{grid-row:1}
+  .demo-grid>.scene-panel{grid-row:2}
+  .slack-panel{height:780px;min-height:740px}
+}
+@media(max-width:540px){
+  .slack-panel{height:800px;min-height:740px}
+  .slack-panel .channel-sidebar{display:none}
+  .slack-panel .workspace-rail{width:45px;min-width:45px;padding:12px 2px}
+  .slack-panel .rail-button{width:39px;font-size:9px}
+  .slack-panel .workspace-avatar{width:30px;height:30px;font-size:13px}
+  .slack-panel .slack-history{display:none}
+  .slack-panel .slack-topbar{padding:6px 9px;gap:8px}
+  .slack-panel .window-controls{display:none}
+  .slack-panel .channel-heading{padding:8px 6px 8px 2px;gap:3px}
+  .slack-panel .slack-back{display:inline-flex;width:30px;height:40px}
+  .slack-panel .channel-heading strong{font-size:15px}
+  .slack-panel .channel-heading .hash{font-size:19px}
+  .slack-panel .channel-head-actions{gap:1px!important}
+  .slack-panel .avatar-stack,.slack-panel #expand-slack{display:none}
+  .slack-panel .channel-huddle{width:33px;height:38px;border:0}
+  .slack-panel .channel-tabs{gap:14px;padding:0 10px}
+  .slack-panel .channel-tabs button{font-size:12px;gap:4px}
+  .slack-panel .channel-tabs .icon{display:none}
+  .slack-panel .channel-content{padding:16px 10px}
+  .slack-panel .message{gap:7px}
+  .slack-panel .message-avatar{width:29px;height:29px;font-size:10px}
+  .slack-panel .workflow-card{padding:10px;border-left-width:3px}
+  .slack-panel .workflow-card h3{font-size:15px}
+  .slack-panel .metric-row{flex-direction:column;gap:10px}
+  .slack-panel .slack-button{min-height:40px;font-size:13px}
+  .slack-panel .composer{margin:7px 9px 0;padding:8px}
+  .slack-panel .composer-format{gap:13px!important;font-size:13px}
+  .slack-panel .composer-tools{gap:10px}
+  .slack-panel .composer input{font-size:16px}
+  .slack-panel .composer-tool-divider{display:none}
+  .slack-panel .slack-home .mobile-workspace-heading{padding:14px 12px;gap:8px}
+  .slack-panel .slack-home .mobile-workspace-heading h3{font-size:21px}
+  .slack-panel .mobile-shortcuts{padding:14px 12px;gap:8px}
+  .slack-panel .mobile-home-content{padding-left:12px;padding-right:12px}
+  .slack-panel .mobile-section-heading{align-items:flex-start;flex-direction:column;gap:3px}
+  .slack-panel .mobile-section-heading>span{text-align:left}
+  .mobile-preview .slack-panel,.mobile-preview.expanded .slack-panel{width:calc(100% - 16px);max-width:420px;height:850px;margin:18px 0;border-width:6px;border-radius:32px}
+  .mobile-preview .slack-panel .channel-heading{padding-right:7px;gap:3px}
+  .mobile-preview .slack-panel .channel-heading strong{font-size:16px}
+  .mobile-preview .slack-panel .slack-back{width:33px;min-width:33px}
+  .mobile-preview .slack-panel .channel-huddle{width:36px}
+  .mobile-preview .slack-panel .channel-tabs{gap:16px;padding:0 11px}
+  .mobile-preview .slack-panel .channel-tabs button{font-size:12px}
+  .mobile-preview .slack-panel .channel-content{padding:17px 10px 10px}
+  .mobile-preview .slack-panel .message-avatar{width:31px;height:31px;font-size:11px}
+  .mobile-preview .slack-panel .message{gap:8px}
+  .mobile-preview .slack-panel .metric-row{flex-direction:row;gap:12px}
+  .mobile-preview .slack-panel .slack-home .mobile-workspace-heading{padding:12px 14px}
+  .mobile-preview .slack-panel .slack-home .mobile-workspace-heading h3{font-size:23px}
+  .mobile-preview .slack-panel .mobile-section-heading{flex-direction:row;align-items:baseline;gap:8px}
+  .mobile-preview .slack-panel .mobile-section-heading>span{text-align:right}
+  .slack-dialog{padding:19px 17px;max-height:90dvh}
+  .slack-dialog h2{font-size:22px}
+  .slack-dialog .dialog-top .icon-button{width:42px;height:42px}
+  .slack-dialog .feature-form textarea,.slack-dialog .feature-form select,.slack-dialog .demo-login input{font-size:16px}
+  .slack-dialog .primary-button,.slack-dialog .slack-button{min-height:44px;font-size:14px}
+  .slack-dialog .detail-grid,.slack-dialog .evidence-grid{grid-template-columns:1fr}
+  .slack-dialog .canvas-preview{padding:12px}
+}
+@media(max-width:370px){
+  .slack-panel .workspace-rail{width:40px;min-width:40px}
+  .slack-panel .rail-button{width:36px;font-size:8px}
+  .slack-panel .channel-heading strong{font-size:13px}
+  .slack-panel .channel-tabs{gap:11px;padding:0 8px}
+  .slack-panel .channel-tabs button{font-size:11px}
+  .slack-panel .message{gap:6px}
+  .slack-panel .message-avatar{width:25px;height:25px;font-size:9px}
+  .slack-panel .composer-format{gap:10px!important}
+  .slack-panel .composer-tools{gap:9px}
+  .slack-panel .composer-tools .icon{width:15px;height:15px}
+  .slack-panel .mobile-workspace-heading .workspace-avatar{display:none}
+  .mobile-preview .slack-panel .phone-status{padding-left:12px;padding-right:12px}
+  .mobile-preview .slack-panel .phone-island{width:76px}
+  .mobile-preview .slack-panel .channel-heading strong{font-size:15px}
+  .mobile-preview .slack-panel .channel-tabs{gap:15px}
+  .mobile-preview .slack-panel .channel-tabs button{font-size:12px}
+  .mobile-preview .slack-panel .message-avatar{width:28px;height:28px;font-size:10px}
+  .mobile-preview .slack-panel .message{gap:7px}
+  .mobile-preview .slack-panel .workflow-card{padding:10px}
+  .mobile-preview .slack-panel .metric-row{flex-direction:column;gap:9px}
+  .mobile-preview .slack-panel .workflow-actions>.slack-button{width:100%}
+  .mobile-preview .slack-panel .composer-tools{gap:10px}
+  .mobile-preview .slack-panel .composer-tools .icon{width:16px;height:16px}
+  .mobile-preview .slack-panel .mobile-section-heading{flex-direction:column;gap:3px}
+  .mobile-preview .slack-panel .mobile-section-heading>span{text-align:left}
+  .slack-dialog .channel-picker{grid-template-columns:1fr}
+}

@@ -1,0 +1,34 @@
+/* Photos keep the same dimensions as the Slack navigation they belong to. */
+.client-dialog-layer:has(.slack-signin-dialog){background:#fff}
+.client-dialog-layer #dialog.slack-signin-dialog{border:0;border-radius:0;box-shadow:none;background:#fff}
+.client-dialog-layer #dialog.slack-signin-dialog .dialog-top .eyebrow{font-size:10px;color:#616061}
+.client-dialog-layer #dialog.slack-signin-dialog .demo-login{margin-top:22px;margin-bottom:18px;padding:20px;border:1px solid #ddd;border-radius:8px}
+.client-dialog-layer #dialog.slack-signin-dialog .login-identity>.identity-avatar{width:46px;height:46px}
+.client-dialog-layer #dialog.slack-signin-dialog .signin-help{text-align:center;font-size:12px;color:#616061}
+.client-dialog-layer #dialog.slack-signin-dialog input[readonly]{background:#fff;color:#1d1c1d}
+.slack-panel .profile-mini{padding:0;overflow:hidden;background:#e8e5e8}
+.slack-panel .profile-mini>.profile-photo{display:block;width:100%;height:100%;border-radius:inherit}
+.slack-panel .workspace-avatar{padding:0;background:#fff;border-color:#d6dfce}
+.slack-panel .workspace-logo{display:block;width:100%;height:100%;border-radius:inherit}
+.slack-panel .sidebar-app .app-avatar{padding:0;background:#fff;overflow:hidden}
+.slack-panel .avatar-stack>i:last-child{margin-left:-5px;background:#f0f0f0;color:#616061;width:28px;height:25px}
+.scene-activity>.scene-person-photo{display:block;width:34px;height:34px;flex:0 0 34px;margin:0!important;border-radius:6px}
+.emoji{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-style:normal;font-weight:400;line-height:1;font-variant-emoji:emoji}
+.slack-panel .reaction{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-width:44px;min-height:29px;padding:3px 8px;border:1px solid #e7e7e7;border-radius:15px;background:#f8f8f8;color:#1d1c1d;font-size:12px}
+.slack-panel .reaction .emoji{font-size:16px}
+.slack-panel .reaction:hover{border-color:#b9babb;background:#f1f1f1}
+.slack-panel .reaction[aria-pressed=true]{background:#e8f4fa;border-color:#1264a3;color:#1264a3}
+.slack-panel .reaction-count{font-size:12px;line-height:1.4}
+.store-card>.identity-store-photo,.store-card>.identity-store-logo{width:100%;height:118px;aspect-ratio:auto;margin:0 0 13px;object-fit:cover;border:1px solid #e5e9df}
+.store-card>.identity-store-logo{padding:19px;object-fit:contain}
+.store-card h3{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.person-label{display:inline-flex!important;align-items:center;gap:7px;min-width:0;vertical-align:middle}
+.person-label>.person-label-photo{width:24px;height:24px;flex:0 0 24px;display:block;border-radius:4px}
+.person-label>span:last-child{min-width:0}
+.client-dialog-layer #dialog .person-label b{display:block;font-size:11px;line-height:1.4;font-weight:600;overflow-wrap:anywhere}
+.client-dialog-layer #dialog .person-label small{display:block;margin:2px 0 0;font-size:10px;line-height:1.4;color:#616061}
+.store-contacts{display:grid;gap:10px;margin-top:12px}
+.list-row .person-label{gap:5px}
+.list-row .person-label-photo{width:20px;height:20px;flex-basis:20px}
+.workforce-card>.person-label{margin:9px 0}
+@media(max-width:540px){.store-card>.identity-store-photo,.store-card>.identity-store-logo{height:100px}.scene-activity>.scene-person-photo{width:28px;height:28px;flex-basis:28px}}

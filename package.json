@@ -1,0 +1,14 @@
+{
+  "name": "el-jannah-store-os",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An interactive El Jannah store operations concept, built around Slack.",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}

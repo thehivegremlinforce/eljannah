@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#114734">
+  <meta name="description" content="Slack is the work OS for every connected store. Explore a complete El Jannah shift from frontline access to the manager's next step.">
+  <title>El Jannah | Slack is the work OS for every connected store</title>
+  <link rel="icon" href="assets/ej-logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/vonder-rough.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="connected-store.css">
+  <link rel="stylesheet" href="slack-shell.css">
+  <link rel="stylesheet" href="client-dialogs.css">
+  <link rel="stylesheet" href="click-guidance.css">
+  <link rel="stylesheet" href="presenter.css">
+  <link rel="stylesheet" href="external-guidance.css">
+  <link rel="stylesheet" href="identities.css">
+  <link rel="stylesheet" href="slack-realism.css">
+  <link rel="stylesheet" href="huddle.css">
+  <link rel="stylesheet" href="shell-refinements.css">
+  <link rel="stylesheet" href="workspace-layout.css">
+</head>
+<body>
+<a class="skip-link" href="#experience">Skip to the store walkthrough</a>
+<header class="site-header">
+  <a class="brand" href="#" aria-label="El Jannah Store OS home"><img src="assets/ej-logo.svg" alt="El Jannah" width="110" height="56"><span class="brand-divider"></span><span>THE STORE<br><b>OPERATING SYSTEM</b></span></a>
+  <nav class="main-nav" aria-label="Main navigation"><button class="nav-link active" data-view="store">The store floor</button><button class="nav-link" data-view="network">Across our stores</button></nav>
+  <div class="header-end"><span class="slack-lockup"><span>Built around</span><img class="slack-brand-logo" src="assets/slack-logo-white.png" alt="Slack" width="100" height="38"></span><button class="icon-button light" id="about" aria-label="About this concept">?</button></div>
+</header>
+<main>
+  <section class="intro" aria-labelledby="headline">
+    <div><p class="eyebrow"><span class="small-flame">♨</span> THE CONNECTED STORE</p><h1 id="headline">EVERY STORE.<br><span>CONNECTED.</span></h1></div>
+    <div class="intro-copy"><p class="work-os-statement"><strong>Slack is the work OS for every connected store.</strong></p><p class="intro-support">Less chasing. A clearer shift.</p><button class="primary-button" id="tour"><span data-icon="play"></span> Start employee walkthrough <span data-icon="arrow-right"></span></button><span class="tour-caption">Sign in first. Follow the highlighted button at each step.</span><button class="text-button" data-presenter-open><span data-icon="document"></span> Presenter script & talking points</button></div>
+    <div class="intro-stamp" aria-hidden="true"><span>MADE FOR</span><b>THE<br>FLOOR.</b><span>CONNECTED TO HQ</span></div>
+  </section>
+
+  <section class="experience" id="experience" aria-label="Interactive store operations walkthrough">
+    <div class="experience-top"><div class="view-heading"><span class="live-dot"></span><strong id="view-title">Omar’s view · Frontline employee</strong><span class="sample-pill">STORE OPERATIONS</span></div><div class="top-actions"><div class="device-switch" role="group" aria-label="Preview format"><button data-device="desktop" aria-pressed="false"><span data-icon="grid"></span> Desktop</button><button class="active" data-device="mobile" aria-pressed="true"><span data-icon="phone"></span> Mobile</button></div><label for="store-select" class="sr-only">Choose a store</label><select id="store-select" title="Choose a store for this presentation"></select><button class="text-button" id="reset-demo" aria-label="Reset walkthrough"><span data-icon="reset"></span> Reset walkthrough</button></div></div>
+    <div class="frontline-guide" id="frontline-guide" aria-label="Guided crew shift" hidden></div>
+    <nav class="journey" id="journey" aria-label="Explore a shift"></nav>
+    <details id="presenter-notes" class="presenter-notes"><summary><span data-icon="document"></span> Presenter script & the problem <small id="presenter-step-label">Employee view</small></summary><div class="presenter-body"><div class="presenter-problem"><small>The problem</small><p id="presenter-problem"></p></div><div class="presenter-say"><small>What to say</small><p id="presenter-say"></p></div><div class="presenter-click"><small>Where to click</small><p id="presenter-click"></p><button class="text-button" data-guide-focus>Back to the highlighted action <span data-icon="arrow-right"></span></button></div><a class="presenter-download" href="PRESENTER-SCRIPT.md" download>Download the full script <span data-icon="document"></span></a></div></details>
+    <div class="demo-grid" id="demo-grid">
+      <section class="scene-panel" aria-label="Interactive 3D store">
+        <div class="scene-heading"><div><span class="eyebrow" id="scene-time">09:30 · OPENING</span><h2 id="scene-title">READY FOR<br>A LEGENDARY DAY.</h2></div><span class="scene-badge"><span class="live-dot"></span> Store connected</span></div>
+        <div id="scene" class="scene-canvas"></div>
+        <div id="scene-activity" class="scene-activity" role="status" hidden><span data-icon="phone"></span><div><b id="scene-person">Omar · On the floor</b><span id="scene-person-action">Using Slack on the phone</span></div><span class="activity-pulse" aria-hidden="true"></span></div>
+        <div class="scene-labels" id="scene-labels"><button data-zone="grill"><span class="zone-dot orange"></span>Charcoal kitchen</button><button data-zone="counter"><span class="zone-dot"></span>Orders & packing</button><button data-zone="stock"><span class="zone-dot blue"></span>Stock & deliveries</button></div>
+        <div class="zone-inspector" id="zone-inspector" hidden></div>
+        <div class="scene-hint"><span data-icon="hand"></span> Drag to explore · Select a part of the store</div>
+        <div class="scene-toolbar"><button id="explode" class="explode-button" aria-pressed="false"><span data-icon="layers"></span> Break it apart</button><label class="explode-slider"><span class="sr-only">Store separation</span><input id="explode-range" type="range" min="0" max="100" value="0" aria-label="Store separation"><output id="explode-output">0%</output></label><div class="scene-tools"><button class="rotation-button" id="rotate" aria-label="Start rotation" aria-pressed="false"><span data-icon="rotate"></span><span>Start rotation</span></button><button class="icon-button" id="zoom-in" aria-label="Zoom in"><span data-icon="plus"></span></button><button class="icon-button" id="zoom-out" aria-label="Zoom out"><span data-icon="minus"></span></button><button class="icon-button" id="motion" aria-label="Pause animation" aria-pressed="false"><span data-icon="pause"></span></button><button class="icon-button" id="reset-view" aria-label="Reset store view"><span data-icon="reset"></span></button></div></div>
+        <div class="scene-summary"><div><span class="signal-icon" data-icon="activity"></span><div><b id="signal-label">A signal from the floor</b><span id="signal-detail">The right people see it in Slack.</span></div></div><span class="signal-arrow" data-icon="arrow-right"></span><span class="connected-label">CONNECTED<br>IN SLACK</span></div>
+      </section>
+      <section class="slack-panel" aria-label="Slack workspace">
+        <div class="phone-status" aria-hidden="true"><b>18:42</b><span class="phone-island"></span><span class="phone-connectivity"><svg viewBox="0 0 48 16"><path d="M1 12v3h3v-3Zm5-4v7h3V8Zm5-4v11h3V4Zm5-3v14h3V1Z" fill="currentColor"/><path d="M24 5q5-5 10 0m-8 3q3-3 6 0m-4 3q1-1 2 0" fill="none" stroke="currentColor" stroke-width="2"/><rect x="37" y="4" width="8" height="9" rx="1" fill="none" stroke="currentColor"/><path d="M39 6h4v5h-4Zm7 1h1v3h-1Z" fill="currentColor"/></svg></span></div>
+        <div class="slack-topbar"><div class="slack-history" aria-hidden="true"><span>←</span><span>→</span><span data-icon="clock"></span></div><button id="slack-search" class="slack-search"><span data-icon="search"></span><span>Search El Jannah</span></button><button class="slack-help" data-desktop-nav="more" aria-label="Workspace tools"><span data-icon="info"></span></button><span class="window-controls" aria-hidden="true">− □ ×</span></div>
+        <div class="slack-body">
+          <aside class="workspace-rail" aria-label="Workspace views">
+            <button class="workspace-avatar" data-desktop-nav="home" aria-label="El Jannah workspace"><img src="assets/ej-logo.svg" alt="" width="28" height="28"></button>
+            <button class="rail-button selected" data-desktop-nav="home" aria-label="Home"><span data-icon="home"></span><span>Home</span></button>
+            <button class="rail-button" data-desktop-nav="dms" aria-label="Direct messages"><span data-icon="chat"></span><span>DMs</span></button>
+            <button class="rail-button" data-desktop-nav="activity" aria-label="Store activity"><span data-icon="bell"></span><span>Activity</span></button>
+            <button class="rail-button" data-desktop-nav="more" aria-label="More workspace tools"><span class="more-dots" aria-hidden="true">•••</span><span>More</span></button>
+            <div class="rail-bottom"><button class="rail-create" data-desktop-nav="more" aria-label="Approved workspace tools"><span data-icon="plus"></span></button><button class="profile-mini" data-desktop-nav="you" aria-label="Your profile"><img src="assets/photos-omar.jpg" alt="" width="22" height="22"></button></div>
+          </aside>
+          <aside class="channel-sidebar" aria-label="El Jannah channel sidebar">
+            <div class="workspace-heading"><button data-desktop-nav="home"><b>El Jannah</b><span>⌄</span></button><button data-desktop-nav="more" aria-label="Workspace options">•••</button></div>
+            <div class="workspace-shortcuts"><button data-shell-shortcut="threads"><span data-icon="chat"></span> Threads</button><button data-shell-shortcut="drafts"><span data-icon="document"></span> Drafts & sent</button><button data-shell-shortcut="hub"><span data-icon="document"></span> Store Hub</button></div>
+            <div class="sidebar-section-label"><span>⌄</span> Channels <small id="sidebar-channel-count">10</small></div><div id="desktop-channel-list" class="desktop-channel-list"></div>
+            <div class="sidebar-section-label"><span>⌄</span> Apps</div><button class="sidebar-app" data-feature="agents"><span class="app-avatar"><img src="assets/ej-logo.svg" alt="" width="20" height="20"></span> Store guide</button><button class="sidebar-app" data-feature="shifts"><span data-icon="clock"></span> My shifts</button>
+            <p class="sidebar-scope">Assigned workspace</p>
+          </aside>
+          <section class="slack-home" id="slack-home" aria-label="Workspace home" hidden>
+            <div class="mobile-workspace-heading"><span class="workspace-avatar"><img src="assets/ej-logo.svg" alt="El Jannah" width="28" height="28"></span><h3>El Jannah <span>⌄</span></h3><button data-mobile-nav="you" class="profile-mini" aria-label="Your profile"><img src="assets/photos-omar.jpg" alt="" width="22" height="22"></button></div>
+            <button class="mobile-search" data-slack-search-mobile><span data-icon="search"></span> Search</button>
+            <div class="mobile-shortcuts"><button data-shell-shortcut="threads"><span data-icon="chat"></span><b>Threads</b></button><button data-shell-shortcut="later"><span data-icon="bookmark"></span><b>Later</b></button></div>
+            <div class="mobile-home-content"><div class="mobile-section-heading"><h4>Channels</h4><span>10 assigned</span></div><div id="mobile-channel-list" class="mobile-channel-list"></div></div>
+          </section>
+          <div class="channel">
+            <div class="channel-heading"><button class="slack-back icon-button" data-slack-back aria-label="Back to workspace Home"><span data-icon="chevron-left"></span></button><div class="channel-title-group"><div><span class="hash">#</span><strong id="channel-name">store-bankstown</strong><span class="channel-chevron">⌄</span></div><div class="channel-member-summary"><span class="avatar-stack" aria-label="Team members: Sarah Mansour, Layla Darwish and Omar Haddad"><i><img src="assets/photos-sarah.jpg" alt="Sarah Mansour" width="22" height="22"></i><i><img src="assets/photos-layla.jpg" alt="Layla Darwish" width="22" height="22"></i><i><img src="assets/photos-omar.jpg" alt="Omar Haddad" width="22" height="22"></i></span><span class="mobile-channel-members">14 members</span></div></div><div class="channel-head-actions"><button class="icon-button channel-huddle" data-feature="huddles" aria-label="Join the team huddle"><span data-icon="headphones"></span></button><button class="icon-button" id="expand-slack" aria-label="Expand Slack channel"><span data-icon="expand"></span></button></div></div>
+        <div class="channel-tabs" role="tablist" aria-label="Channel views"><button class="active" id="tab-messages" role="tab" aria-selected="true" data-tab="messages"><span data-icon="chat"></span> Messages</button><button id="tab-hub" role="tab" aria-selected="false" data-tab="hub"><span data-icon="document"></span> Store Hub</button><button id="tab-tasks" role="tab" aria-selected="false" data-tab="tasks"><span data-icon="check-square"></span> Shift tasks</button></div>
+        <div class="channel-content" id="channel-content" role="tabpanel" aria-labelledby="tab-messages"></div>
+        <form class="composer" id="composer"><div class="composer-format" aria-hidden="true"><b>B</b><i>I</i><s>S</s><span>│</span><span>↗</span><span>☷</span><span>≡</span><span>│</span><span>&lt;/&gt;</span></div><label class="sr-only" for="message-input">Write a message</label><input id="message-input" maxlength="1000" placeholder="Message #store-bankstown" autocomplete="off"><div class="composer-bottom"><span class="composer-tools" aria-hidden="true"><span class="composer-plus">＋</span><span>☺</span><span>@</span><span class="mobile-format">Aa</span><span class="composer-tool-divider">│</span><span data-icon="video"></span><span data-icon="mic"></span></span><button type="submit" aria-label="Send message"><span data-icon="send"></span></button></div></form><div class="local-note">Keep the next shift in the know</div>
+          </div>
+        </div>
+        <nav class="mobile-bottom-nav" aria-label="Slack mobile navigation"><button class="selected" data-mobile-nav="home" aria-current="page"><span data-icon="home"></span><span>Home</span></button><button data-mobile-nav="dms"><span data-icon="chat"></span><span>DMs</span></button><button data-mobile-nav="activity"><span data-icon="bell"></span><span>Activity</span></button><button data-mobile-nav="you"><span class="profile-mini"><img src="assets/photos-omar.jpg" alt="" width="24" height="24"></span><span>You</span></button></nav><div class="phone-home-indicator" aria-hidden="true"></div>
+        <div class="client-dialog-layer" hidden><dialog id="dialog" aria-labelledby="dialog-title" aria-modal="false" tabindex="-1"><div class="dialog-top"><span class="eyebrow">EL JANNAH · SLACK</span><button class="icon-button" id="close-dialog" aria-label="Close dialog"><span data-icon="close"></span></button></div><h2 id="dialog-title" tabindex="-1"></h2><div id="dialog-content"></div></dialog></div>
+      </section>
+      <aside id="demo-assistant" class="demo-assistant" aria-label="Walkthrough tips and next steps" hidden><p class="demo-assistant-label">WALKTHROUGH GUIDE</p><div id="click-coach" class="click-coach" role="status" aria-live="polite" hidden></div><div id="journey-dock" class="journey-dock" aria-label="Your next guided step" hidden></div></aside>
+    </div>
+    <div class="network-view" id="network-view" hidden></div>
+    <div class="experience-footer"><div class="role-switch" aria-label="Choose a perspective"><button class="active" data-role="crew">Frontline crew</button><button data-role="manager">Store manager</button></div><span id="perspective-description">You are Omar, on packing and collection.</span><button class="text-button" id="next-stage">Next moment <span data-icon="arrow-right"></span></button></div><div class="presentation-context"><span id="frontline-session">Frontline concept</span><span>Store and perspective selectors are presentation controls.</span></div>
+  </section>
+  <details id="store-context" class="store-context"><summary>What we’re trying to solve <span>Less chasing. A clearer shift.</span></summary>
+  <section class="problem-strip" aria-labelledby="problem-title"><div class="problem-intro"><small>WHAT WE ARE TRYING TO SOLVE</small><h2 id="problem-title">Less chasing. A clearer shift.</h2><p>When briefs, questions and tasks live in different places, a busy crew loses time finding the next step. Follow the work through one connected store.</p></div><div class="problem-points"><div><b>Help the employee find what matters.</b><p>Put the current brief, shift details and approved help in one place.</p></div><div><b>Give every request an owner.</b><p>Keep the issue, decision and follow-up together so work keeps moving.</p></div><div><b>Keep the next shift in the know.</b><p>Carry the context from the floor to the manager and across stores.</p></div></div></section>
+  </details>
+  <section class="capabilities-section" id="capabilities-section" aria-labelledby="capabilities-title"><div class="section-heading"><div><p class="eyebrow">THE FRONTLINE PACK, BROUGHT TO LIFE</p><h2 id="capabilities-title">TEN CAPABILITIES.<br>ONE CONNECTED SHIFT.</h2><p>Try each capability on its own, or follow the guided crew shift above.</p></div><span id="frontline-progress" class="progress-pill">0 / 10 explored</span></div><div class="frontline-features" id="frontline-features"></div></section>
+  <section class="operations-section" id="operations-section" aria-labelledby="operations-title"><div class="section-heading"><div><p class="eyebrow">THE MANAGER'S NEXT STEP</p><h2 id="operations-title">TEN STORE PLAYBOOKS.<br>LESS CHASING. MORE ACTION.</h2><p>Follow Bankstown’s ten playbooks, with evidence, an owner and a follow-up.</p><button class="primary-button" data-start-manager-guide>Start the manager walkthrough <span data-icon="arrow-right"></span></button></div><span id="playbook-count" class="progress-pill">0 / 10 tried</span></div><div class="store-playbooks" id="store-playbooks"></div></section>
+  <section class="principles" aria-label="How the operating system works"><div class="principle-intro"><p class="eyebrow">GOOD WORK. LESS RUNAROUND.</p><h2>THE SECRET IS<br>CONNECTION.</h2></div><button class="principle" data-detail="frontline"><span class="feature-icon" data-icon="phone"></span><b>Built for the shift.</b><p>Briefs, questions and quick actions.<br>Right there on the floor.</p><span>Explore the crew experience <span data-icon="arrow-up-right"></span></span></button><button class="principle" data-detail="systems"><span class="feature-icon" data-icon="connections"></span><b>Your tools. Working together.</b><p>Turn signals from your systems<br>into a clear next step in Slack.</p><span>See the connected systems <span data-icon="arrow-up-right"></span></span></button><button class="principle" data-detail="network"><span class="feature-icon" data-icon="store"></span><b>Local action. Shared learning.</b><p>Keep every store connected<br>to the people who can help.</p><span>Explore the store network <span data-icon="arrow-up-right"></span></span></button></section>
+</main>
+<footer class="site-footer"><img src="assets/ej-logo.svg" alt="El Jannah" width="82" height="42"><span>SLACK IS THE WORK OS FOR EVERY CONNECTED STORE.</span><button class="text-button" id="sources">About this concept & sources <span data-icon="arrow-up-right"></span></button></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

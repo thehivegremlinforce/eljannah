@@ -1,0 +1,158 @@
+/* Fit the working area to the screen; let Slack scroll its own conversations. */
+main{max-width:1840px;padding:0 24px}
+.site-header{height:58px;padding:0 24px;gap:18px}
+.brand{gap:14px}.brand img{width:82px;height:45px}.brand-divider{height:27px}
+.brand>span:last-child{font-size:8px;letter-spacing:1.2px}
+.main-nav{gap:24px}.nav-link{font-size:12px}
+.slack-lockup{gap:11px}
+.slack-brand-logo{display:block;width:100px;height:auto;max-height:38px;object-fit:contain;flex-shrink:0}
+.intro{display:flex;align-items:center;gap:28px;padding:15px 0;min-height:96px}
+.intro>.intro-stamp{display:none}
+.intro>div:first-child{flex-shrink:0}
+.intro .eyebrow{display:none}
+.intro h1{font-size:38px;line-height:1;letter-spacing:0;margin:0}
+.intro h1 br{display:none}.intro h1 span{margin-left:7px}
+.intro-copy{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:5px 24px;max-width:none;padding:0;flex:1}
+.intro-copy .work-os-statement{grid-column:1;grid-row:1;margin:0;font-size:15px;line-height:1.4}
+.intro-copy .work-os-statement br{display:none}
+.intro-copy .intro-support{grid-column:1;grid-row:2;margin:0;font-size:12px;line-height:1.4}
+.intro-copy #tour{grid-column:2;grid-row:1 / span 2;min-height:40px;font-size:12px;padding:9px 13px}
+.intro-copy .tour-caption,.intro-copy>[data-presenter-open]{display:none}
+.store-context{margin-top:18px;border:1px solid #d4dfcb;border-radius:8px;background:#fff}
+.store-context>summary{padding:15px 18px;cursor:pointer;font-size:13px;font-weight:700;color:#23482e}
+.store-context>summary>span{margin-left:16px;font-weight:400;color:#63715b}
+.store-context .problem-strip{margin:0;border:0;border-top:1px solid #e1e8da;border-radius:0 0 8px 8px;padding:20px}
+.experience{scroll-margin-top:10px}
+.experience-top{min-height:48px;padding:7px 14px;gap:12px;flex-wrap:nowrap}
+.view-heading{min-width:0}.view-heading strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sample-pill{display:none}.top-actions{gap:12px}
+.device-switch button{min-height:30px;padding:6px 9px}
+.frontline-guide{min-height:67px;padding:9px 14px;gap:12px;flex-wrap:nowrap}
+.guide-count{height:43px;width:39px;border-radius:6px}.guide-count b{font-size:23px}.guide-count span{font-size:7px;margin-top:0}
+.guide-copy{min-width:0;flex-basis:auto}.guide-copy .eyebrow{display:none}
+.guide-copy h2{font-size:15px;line-height:1.3;margin:0}
+#experience.guided-mode .frontline-guide .guide-copy>.guide-problem{display:block;margin:4px 0 0;font-size:11px;line-height:1.35;max-width:750px}
+.guide-actions{display:flex;align-items:center;gap:14px;min-width:0;max-width:none;width:auto;padding:0}
+.guide-actions>.primary-button{font-size:11px;min-height:36px;padding:7px 10px;white-space:nowrap}
+.guide-actions>div{margin:0;gap:8px;white-space:nowrap}
+.guide-actions .text-button{min-height:32px}
+.guided-mode #journey{display:none}
+.journey{min-height:60px}.journey-step{padding:10px;min-height:60px;gap:7px}
+.presenter-notes>summary{height:33px;min-height:33px;padding:0 14px;font-size:11px}
+.presenter-notes>summary>small{border:0;background:transparent;padding:0;font-size:10px}
+.presenter-notes>summary>.icon{width:15px;height:15px}
+.experience-footer{min-height:43px;padding:5px 14px;gap:10px}
+.presentation-context{padding:4px 14px;font-size:9px;min-height:22px}
+.experience-footer>.role-switch{padding:2px}.role-switch button{padding:5px 9px}
+.capabilities-section,.operations-section{padding-top:26px}
+.section-heading h2{font-size:29px}
+.rotation-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:34px;flex:1;padding:7px 10px;border:1px solid #c4d7b6;border-radius:5px;background:#fff;color:#356923;font-size:11px;font-weight:700;white-space:nowrap}
+.rotation-button:hover{background:#edf6e5}
+.rotation-button[aria-pressed=true]{background:#114734;border-color:#114734;color:#fff}
+.scene-toolbar{display:grid;grid-template-columns:auto minmax(45px,1fr);gap:6px 10px;padding:7px;margin:0 12px 10px;flex-shrink:0}
+.scene-tools{grid-column:1 / -1;width:100%;gap:4px;border-top:1px solid #dce6d1;padding-top:6px}
+.scene-tools .icon-button{width:32px;height:34px;min-width:32px;min-height:34px}
+.scene-toolbar .explode-button{min-height:30px;font-size:10px;padding:6px 8px}
+.scene-toolbar .explode-slider{min-width:0}
+.scene-toolbar .explode-slider input{height:20px}
+.scene-summary{padding:10px 12px;min-height:50px;gap:9px;flex-shrink:0}
+.scene-summary .connected-label,.scene-summary .signal-arrow{display:none}
+.scene-summary .signal-icon{width:25px;height:25px;padding:5px}
+.scene-summary b{margin-bottom:3px;font-size:11px}.scene-summary div>span:not(.signal-icon){font-size:10px;line-height:1.4}
+.scene-hint{height:24px;min-height:24px;font-size:9px;margin:0;flex-shrink:0}
+.scene-heading{top:15px;left:16px;right:14px}.scene-heading h2{font-size:25px}.scene-heading .scene-badge{display:none}
+.scene-activity{top:91px;left:14px;max-width:calc(100% - 28px);padding:7px 10px;gap:7px}
+.scene-activity b{font-size:11px}.scene-activity span:not(.activity-pulse){font-size:10px}.scene-activity>.icon{width:19px;height:19px}
+.scene-labels{bottom:180px;gap:5px;left:10px;right:10px}.scene-labels button{font-size:8px;padding:6px;min-height:26px}
+.zone-inspector{bottom:210px;max-height:210px;overflow:auto}
+.slack-panel .channel-content{scrollbar-gutter:stable}
+.slack-panel .mobile-shortcuts,.mobile-preview .slack-panel .mobile-shortcuts{padding:10px 14px;gap:10px}
+.slack-panel .mobile-shortcuts button,.mobile-preview .slack-panel .mobile-shortcuts button{min-height:50px;padding:9px;flex-direction:row;align-items:center;justify-content:center;gap:8px}
+.slack-panel .mobile-shortcuts b,.mobile-preview .slack-panel .mobile-shortcuts b{font-size:13px}
+.mobile-preview .slack-panel .mobile-search{min-height:36px;margin-bottom:10px;padding:7px 12px}
+.mobile-preview .slack-panel .mobile-workspace-heading{min-height:58px;padding:9px 15px}
+.mobile-preview .slack-panel .mobile-workspace-heading h3{font-size:21px}
+.mobile-preview .slack-panel .mobile-bottom-nav{min-height:53px;padding:3px 5px 0}
+.mobile-preview .slack-panel .mobile-bottom-nav button{min-height:47px}
+.mobile-preview .slack-panel .phone-home-indicator{height:12px;min-height:12px}
+.slack-panel .local-note{display:none}
+.slack-panel .composer{margin-bottom:9px}
+
+@media(min-width:1051px){
+  #experience{--workspace-height:clamp(500px,calc(100dvh - 345px),850px)}
+  #experience #demo-grid{height:var(--workspace-height);min-height:0;grid-template-columns:minmax(280px,.85fr) minmax(550px,1.55fr);grid-template-rows:minmax(0,1fr);align-items:stretch;background:#e8eddf}
+  #experience #demo-grid.has-demo-guide{grid-template-columns:minmax(270px,.85fr) minmax(500px,1.55fr) 220px;gap:0}
+  #experience.mobile-preview #demo-grid{grid-template-columns:minmax(300px,1fr) minmax(340px,410px)}
+  #experience.mobile-preview #demo-grid.has-demo-guide{grid-template-columns:minmax(300px,1fr) minmax(340px,410px) 230px}
+  #experience #demo-grid>.scene-panel{grid-row:1;grid-column:1;height:100%;min-height:0;align-self:stretch}
+  #experience #demo-grid>.slack-panel{grid-column:2;grid-row:1;height:100%;min-height:0;align-self:stretch}
+  #experience #demo-grid>.scene-panel .scene-canvas{flex:1;height:auto;min-height:0;contain:size}
+  #experience #demo-grid>.scene-panel .scene-canvas>canvas{position:absolute;inset:0;width:100%;height:100%}
+  #experience.mobile-preview #demo-grid>.slack-panel{width:calc(100% - 24px);max-width:386px;height:calc(100% - 20px);margin:10px 0;min-height:0;border-width:5px;border-radius:30px}
+  #experience #demo-grid>.demo-assistant{grid-column:3;grid-row:1;margin:12px 12px 12px 0;padding:13px;max-height:calc(100% - 24px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+  #experience .demo-assistant:not([hidden]) #click-coach{grid-template-columns:minmax(0,1fr) 25px;align-items:start;gap:10px 8px}
+  #experience .demo-assistant .coach-progress{grid-column:1;grid-row:1}
+  #experience .demo-assistant .coach-dot{grid-column:2;grid-row:1}
+  #experience .demo-assistant .coach-copy{grid-column:1 / -1;grid-row:2}
+  #experience.expanded #demo-grid{grid-template-columns:minmax(0,1fr)}
+  #experience.expanded #demo-grid.has-demo-guide{grid-template-columns:minmax(0,1fr) 240px}
+  #experience.expanded #demo-grid>.slack-panel{grid-column:1}
+  #experience.expanded #demo-grid>.demo-assistant{grid-column:2}
+  #experience.mobile-preview.expanded #demo-grid{grid-template-columns:minmax(340px,410px);justify-content:center}
+  #experience.mobile-preview.expanded #demo-grid.has-demo-guide{grid-template-columns:minmax(340px,410px) 240px;gap:16px}
+}
+@media(min-width:1051px) and (max-width:1350px){
+  main{padding:0 16px}.intro{gap:20px}.intro h1{font-size:31px}.intro-copy{gap:4px 15px}.intro-copy .work-os-statement{font-size:13px}.intro-copy #tour{font-size:11px;max-width:255px}
+  .guide-actions{gap:10px}.guide-actions>.primary-button{font-size:10px}.guide-copy>.guide-problem{max-width:520px!important}
+  #experience #demo-grid.has-demo-guide{grid-template-columns:minmax(260px,.85fr) minmax(490px,1.6fr) 205px}
+  #experience.mobile-preview #demo-grid.has-demo-guide{grid-template-columns:minmax(280px,1fr) 360px 215px}
+  .scene-labels{display:none}
+}
+@media(max-width:1050px){
+  main{padding:0 15px}.site-header{padding:0 18px}.header-end{gap:10px}.intro{gap:20px;min-height:100px}.intro h1{font-size:32px}.intro h1 br{display:block}.intro h1 span{margin-left:0}.intro-copy .work-os-statement{font-size:14px}.intro-copy{gap:4px 15px}.intro-copy #tour{font-size:11px;max-width:225px}
+  .frontline-guide{flex-wrap:wrap}.guide-copy{flex:1}.guide-actions{margin-left:auto}.guide-actions>div{margin:0}
+  #experience #demo-grid,#experience #demo-grid.has-demo-guide{height:auto;min-height:0;grid-template-columns:minmax(0,1fr);gap:0}
+  #experience #demo-grid>.scene-panel{grid-column:1;grid-row:1;height:255px;min-height:255px;border-right:0;border-bottom:1px solid #d4dec9;display:block}
+  #experience #demo-grid>.scene-panel .scene-canvas{position:absolute;inset:0 0 55px;height:200px;min-height:0;contain:size}
+  #experience #demo-grid>.scene-panel .scene-canvas>canvas{position:absolute;inset:0;width:100%;height:100%}
+  #experience #demo-grid>.scene-panel .scene-toolbar{display:flex;position:absolute;left:10px;right:10px;bottom:8px;margin:0;padding:5px;gap:8px;flex-wrap:nowrap;height:44px}
+  #experience #demo-grid>.scene-panel .scene-tools{width:auto;flex:1;grid-column:auto;margin:0;padding:0;border:0;gap:4px}
+  #experience #demo-grid>.scene-panel .explode-slider{max-width:100px;flex:1}
+  #experience #demo-grid>.scene-panel .scene-heading{top:12px;left:14px}
+  #experience #demo-grid>.scene-panel .scene-heading h2{font-size:23px}
+  #experience #demo-grid>.scene-panel .scene-activity{top:10px;left:auto;right:12px;max-width:45%;padding:6px 8px}
+  #experience #demo-grid>.scene-panel .scene-labels,#experience #demo-grid>.scene-panel .scene-hint,#experience #demo-grid>.scene-panel .scene-summary{display:none}
+  #experience #demo-grid>.scene-panel .zone-inspector{bottom:61px;top:12px;max-height:none;left:12px;right:12px}
+  #experience #demo-grid>.demo-assistant{grid-column:1;grid-row:2;margin:10px 12px;padding:11px 13px;max-height:none}
+  #experience #demo-grid>.slack-panel,#experience.mobile-preview #demo-grid>.slack-panel{grid-column:1;grid-row:3;min-height:0;height:clamp(510px,calc(100dvh - 185px),710px)}
+  #experience.mobile-preview #demo-grid>.slack-panel{width:min(390px,calc(100% - 20px));margin:0 0 12px;border-width:5px;border-radius:30px}
+  #experience.expanded #demo-grid>.scene-panel{display:none}
+  #experience.expanded #demo-grid>.demo-assistant{grid-row:1}
+  #experience.expanded #demo-grid>.slack-panel{grid-row:2}
+}
+@media(max-width:650px){
+  .site-header{height:54px;padding:0 12px;gap:12px}.brand img{width:66px;height:40px}.brand-divider,.brand>span:last-child,.header-end{display:none}.main-nav{gap:18px}.nav-link{font-size:11px}
+  main{padding:0 8px}.intro{padding:13px 4px;gap:14px;min-height:0;align-items:start}.intro h1{font-size:27px}.intro-copy{display:flex;flex-direction:column;align-items:flex-start;gap:7px}.intro-copy .work-os-statement{font-size:12px;line-height:1.35}.intro-copy .intro-support{display:none}.intro-copy #tour{font-size:10px;padding:7px 9px;min-height:34px;text-align:left;gap:5px;max-width:100%}.intro-copy #tour>.icon:first-child{display:none}.intro-copy #tour>.icon:last-child{margin-left:2px;width:13px}
+  .experience-top{flex-wrap:wrap;padding:8px 10px;gap:7px}.view-heading{width:100%}.top-actions{gap:8px}.top-actions select{height:36px}.device-switch button{min-height:32px}
+  .frontline-guide{padding:10px;gap:8px;display:grid;grid-template-columns:35px minmax(0,1fr)}.guide-count{width:35px;height:40px}.guide-copy{width:auto}.guide-copy h2{font-size:14px}.guided-mode .frontline-guide .guide-copy>.guide-problem{font-size:11px;line-height:1.4}
+  .guide-actions{grid-column:1 / -1;width:100%;display:flex;justify-content:space-between;gap:8px}.guide-actions>.primary-button{width:auto;font-size:10px;padding:6px 8px;min-height:34px}.guide-actions>div{gap:8px}.guide-actions .text-button{min-height:34px;font-size:10px}
+  .presenter-notes>summary{min-height:37px;height:37px;font-size:11px;padding:0 10px}.presenter-notes>summary>small{display:none}
+  .journey-step{min-width:88px;padding:8px;min-height:57px}.journey{min-height:57px}
+  #experience #demo-grid>.scene-panel{height:236px;min-height:236px}
+  #experience #demo-grid>.scene-panel .scene-canvas{height:181px;inset:0 0 55px}
+  #experience #demo-grid>.scene-panel .scene-heading{display:none}
+  #experience #demo-grid>.scene-panel .scene-activity{left:9px;right:auto;top:8px;max-width:calc(100% - 18px)}
+  #experience #demo-grid>.scene-panel .scene-toolbar{left:8px;right:8px;bottom:8px;height:44px;padding:4px;gap:5px}
+  #experience #demo-grid>.scene-panel .explode-slider,#experience #demo-grid>.scene-panel #zoom-in,#experience #demo-grid>.scene-panel #zoom-out{display:none}
+  #experience #demo-grid>.scene-panel .explode-button{flex:0 1 auto;font-size:10px;min-height:34px;padding:5px 7px;gap:4px}
+  .scene-tools .rotation-button{font-size:10px;padding:6px;gap:4px}.scene-tools .icon-button{width:30px;min-width:30px;min-height:34px}.scene-tools .icon{width:15px;height:15px}
+  #experience #demo-grid>.demo-assistant{margin:8px;padding:10px 11px}
+  .demo-assistant-label{display:none}
+  .demo-assistant .click-coach .coach-copy b{font-size:12px}.demo-assistant .click-coach .coach-copy span{font-size:11px;line-height:1.4}
+  .demo-assistant #click-coach{gap:5px 7px}
+  #experience #demo-grid>.slack-panel,#experience.mobile-preview #demo-grid>.slack-panel{height:clamp(500px,calc(100dvh - 170px),690px);max-width:100%}
+  #experience.mobile-preview #demo-grid>.slack-panel{width:calc(100% - 16px)}
+  .experience-footer{padding:7px 9px;gap:7px}.experience-footer>span{display:none}.role-switch button{font-size:10px;min-height:32px;padding:5px 7px}.experience-footer>.text-button{font-size:10px}
+  .presentation-context{padding:5px 10px;min-height:0}.presentation-context>span{margin:0}.presentation-context>span:last-child{display:none}
+  .store-context{margin-top:13px}.store-context>summary{padding:13px;font-size:12px}.store-context>summary>span{display:block;margin:5px 0 0 16px;font-size:11px}
+}
