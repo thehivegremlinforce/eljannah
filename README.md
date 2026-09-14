@@ -1,8 +1,10 @@
 # El Jannah Store OS
 
+👋 Built by **Brian D'Souza**, Field CTO @Slack ANZ.
+
 **Slack is the work OS for every connected store.**
 
-An interactive El Jannah concept connecting crew, store managers and head office. Includes an animated 3D store with an exploded view, a guided crew shift, ten manager playbooks, seven operational scenarios and a simulated Slack workspace.
+🍗 Follow a shift at El Jannah and see how Slack brings the crew, store managers and head office together. Explore the animated 3D store, try the frontline workflows and follow each issue through to its next step.
 
 ## Open the walkthrough
 
