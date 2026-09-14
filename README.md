@@ -6,61 +6,113 @@
 
 🍗 Follow a shift at El Jannah and see how Slack brings the crew, store managers and head office together. Explore the animated 3D store, try the frontline workflows and follow each issue through to its next step.
 
-## Open the walkthrough
+## Less chasing. A clearer shift.
 
-With Node.js installed:
+On a busy shift, the team needs to know what matters, who can help and what happens next. This walkthrough brings those everyday moments together:
+
+- Find the shift brief, tasks and answers in one place.
+- Give each request an owner who can follow it through.
+- Leave the next crew a useful handover.
+- Help managers see what needs attention across their stores.
+
+## 🚀 Run it on your computer
+
+Clone or download this repository. With Node.js installed, open a terminal in the project folder and run:
 
 ```sh
 npm start
 ```
 
-Open [the local walkthrough](http://127.0.0.1:4175). The port can be changed with the `PORT` environment variable. No npm install is required to run or build the app. Three.js and the brand assets are included locally.
+Then open [the walkthrough](http://127.0.0.1:4175/) in your browser. Everything needed to run it is included, so there’s no `npm install` step.
 
-## Walk through a connected shift
+## 👟 Start with Omar
 
-The page opens as **Omar, the frontline employee**, including after a previous manager session. A fresh or unverified session automatically opens **Sign in to El Jannah** as the first guided step. It shows Omar Haddad with read-only **Employee ID EJ-014**. Choose **Continue**, then **Approve sign-in** on the security screen. No initial Start action is required. A returning verified employee lands at the store opening with saved work preserved. A fresh visit uses **Mobile**; an explicit device preference is retained on reload. **Reset walkthrough** clears saved work and opens employee sign-in again in Mobile.
+You start as **Omar Haddad**, a crew member at El Jannah. On your first visit, his sign-in screen opens automatically in Mobile view.
 
-1. Sign in using the already open employee screen. A separate **Walkthrough guide** shows the click tip while the action stays highlighted in Slack. Tips, completion cards and **Continue / Resume** controls sit outside the client, beside it where space allows and in a separate card on smaller screens. Advance at your own pace, use **Show me where to click** to focus the current action, or choose **Explore freely** to leave the guided sequence. Contextual tips remain available when exploring an individual feature. The hero’s **Start employee walkthrough** action can reopen the employee journey when needed.
-2. Explore the ten capabilities: email-free access, a ten-channel workspace, clips, canvases, lists, shift management, approved workflows, huddles, in-channel agents and governance. The source slide groups Huddles & Clips and Canvases & Lists together; this demo gives each a separate step.
-3. Use **Desktop** or **Mobile** in the top toolbar to switch the Slack preview. Both modes share the same store, workflow and progress. Desktop has Slack's app rail, workspace sidebar and conversation. Mobile uses a phone frame with a separate Home screen, channel navigation and bottom tabs. The device choice survives a refresh.
-4. At the end of the crew shift, choose **Start the manager walkthrough**. It takes you through Bankstown’s ten playbooks, then opens the store network: complaints, drive-thru performance, paused delivery, refunds, intraday sales, store diagnostics, the weekly pack, leaderboard changes, overdue follow-up and review responses. You can also start it from the manager section.
-5. Explore the seven store scenarios: opening, prep, dinner rush, delivery, crew cover, handover and the network briefing. Actions have prerequisites and visible outcomes. The network briefing requires the manager perspective.
+1. Use the employee ID already shown, **EJ-014**. Click **Continue**, then **Approve sign-in**.
+2. Follow the highlighted action in Slack. The **Walkthrough guide** beside it explains your next click.
+3. Move through the shift at your own pace. If you lose your place, choose **Show me where to click**. If you close a step, choose **Resume** to reopen it.
+4. Switch between **Desktop** and **Mobile** whenever you like. Your progress, open form and draft stay with you.
+5. When Omar’s shift is complete, choose **Start the manager walkthrough** to see Sarah’s side of the story.
 
-Drag the 3D store to rotate it, or choose **Start rotation** for a continuous turn. The same button becomes **Stop rotation**. Pause and reset also stop the turn; resuming ambient animation leaves rotation off until you start it again. Try **Break it apart**, the separation slider, zoom, pause and reset. Select the grill, counter, stockroom, people, dining area or canopy for context. On touch screens, vertical swipes over the scene scroll the page and horizontal drags rotate the store.
+Want to look around first? Choose **Explore freely**. You can try individual features or use **Start employee walkthrough** to return to the guided shift.
 
-## Presenter script and problem framing
+Your browser remembers completed work and your chosen view. When you return, the page starts with the employee perspective. Choose **Reset walkthrough** and confirm to clear the saved work for all four stores and return to Omar’s sign-in in Mobile view.
 
-Read [the full 8 to 12 minute presenter script](PRESENTER-SCRIPT.md), or open **Presenter script & the problem** above the workspace. The optional notes follow the current crew capability or manager playbook, with **The problem**, **What to say** and **Where to click**. They remain outside the simulated Slack client and do not replace its open form. The script can also be downloaded from the notes panel.
+## 🧩 Ten ways to connect the crew
 
-The opening frames the proposed coordination problem: scattered shift information, requests without a clear owner and context lost between shifts. Each guided step adds a short **What this solves** statement. The script starts with Omar, moves into Sarah’s ten sample manager situations and closes with the connected store network. Sample follow-ups demonstrate the proposed process, rather than measured trading improvements.
+| Feature | Try it in the walkthrough |
+| --- | --- |
+| Email-free access | Sign in with an employee ID and approve the security check. |
+| Ten-channel focus | Open a conversation from Slack’s normal channel list. |
+| Clips | Watch the captioned shift briefing or read the transcript. |
+| Canvases | Find the brief, contacts and procedures in the Store Hub. |
+| Lists | See the shift tasks, their owners and their status. |
+| Shift management | Check your shift, clock in and clock out through the workforce app. |
+| Workflows | Report a packing issue and see it assigned to Sarah. |
+| Huddles | Join the team, talk through the issue and keep the agreed action in the channel. |
+| In-channel agents | Ask the store guide a question without leaving the conversation. |
+| Governed access | See the crew workspace’s limits on external messages and Slack Connect. |
 
-## The client and store interaction
+The frontline pack groups Huddles & Clips and Canvases & Lists together. Here, each gets its own step so you can try it properly.
 
-Workflow panels open inside the Slack desktop or phone client, with the store visible alongside. On narrow screens, a compact store view sits above the client. A crew member holds a phone in the scene, reacts to typed details and confirms completed actions. The actor stays with the store in the exploded view and respects pause and reduced-motion settings.
+Sarah’s huddle invitation has **Join** and **Dismiss** buttons. Join takes you straight into the huddle. To finish that step, choose **Keep the agreed action in the channel**. If you dismiss the invitation or leave early, you can come back and join again. Thread replies stay in the open huddle; saving the agreed action adds the outcome to the store channel.
 
-Changing the sample store, perspective or shift moment dismisses an open panel so its form cannot act on a different context. Switching Desktop and Mobile keeps the same open form, draft and external click prompt. Escape or the panel's close button returns to the workspace with a **Resume** action in the separate Walkthrough guide. The guide skips completed steps, returns after prerequisites and resumes saved progress. Only the underlying Slack controls are blocked while a panel is open; the guide, page and store remain available.
+## See the manager’s side
 
-The Store Hub and task list are view-only in the crew experience. Crew can run the approved opening workflow, join a simulated huddle, play a captioned briefing and ask an approved in-channel agent. The agent uses scripted demo answers. Shift actions illustrate an integrated workforce app. External DMs and Slack Connect are restricted in the frontline experience.
+Choose **Store manager** to follow **Sarah Mansour** through ten situations at Bankstown: customer complaints, drive-thru delays, paused delivery, refunds, daily sales, store performance, the weekly pack, leaderboard changes, overdue follow-ups and review responses.
 
-The ten assigned channels appear in Slack's standard desktop sidebar and mobile Home list. One click opens the conversation and completes the channel step. Every channel has its own conversation and draft; posted messages retain their channel across reloads. The workspace uses purple headers, with Sarah, Layla and Omar's photos beside the channel member count.
+Each playbook brings the details, an owner and the next action into the same conversation. The manager walkthrough finishes with a view across the stores.
 
-Huddles start with Sarah's Slack invitation. The notification names the store channel, and a white invitation sheet shows the two people already there, with **Dismiss** and **Join**. Dismiss leaves the step open; Resume shows the invitation again. One Join opens the active huddle with participant photo tiles, a light thread and a purple call toolbar. The invitation and its dimmed background remain inside Slack while the store stays visible. Microphone, camera, screen, notes and reaction controls change the local preview. Thread replies stay in that preview. Leaving allows a fresh rejoin; only **Keep the agreed action in the channel** completes the huddle step. No media permissions or live call are requested.
+You can also explore seven moments in a store’s week: opening, prep and quality, dinner rush, delivery, crew cover, handover and the network briefing. Some actions need an earlier step completed first. The network briefing is available in the manager view.
 
-Omar Haddad, Sarah Mansour, Layla Darwish and Karim Nasser have consistent stock portraits across conversations, profiles, contacts and huddles. They are fictional demo characters. Saved messages retain their author's identity across perspective changes and reloads. Store cards use verified photos of Bankstown, Granville and Punchbowl; Ivanhoe uses the El Jannah logo because a verified branch photo was unavailable. Emoji reactions use native colour emoji with a count and Slack's blue selection treatment.
+## 🏪 Explore the store
 
-The compact introduction leads straight into the workspace. On laptop and desktop screens, the store, Slack client and external click guide share a height based on the viewport. Longer conversations and forms scroll inside Slack. The background explanation is available under **What we’re trying to solve**, and each guided step keeps its problem and presenter script close by. The stage navigation appears during free exploration. Rotation and store controls remain available on narrow screens.
+Drag the store to turn it, or click **Start rotation** to let it turn continuously. Click **Stop rotation** when you’ve found the angle you want. Pause and Reset also stop the rotation; it stays off until you start it again.
 
-Keyboard users can use native controls and arrow keys in channel tabs. The canvas supports keyboard rotation and zoom. Reduced-motion preferences pause ambient movement and remove transition smoothing; manual controls remain available. **Reset walkthrough** opens a fresh employee sign-in after confirmation.
+Try **Break it apart** to see the store’s different areas. Use the slider to adjust the separation and the zoom controls to look closer. Select the kitchen, counter, stockroom or another area to see how it connects to the work in Slack. On a touch screen, drag sideways to turn the store and swipe vertically to scroll the page.
 
-## Scope
+The person holding a phone reacts as you enter details and complete actions. Forms and huddles open inside Slack, while the click tips stay outside it. On a phone-sized screen, the store sits above the workspace.
 
-All operational figures, staff, messages, status and outcomes are sample data. The store model is a custom illustration, not an actual store plan. There is no connected Slack workspace, live store feed, live AI service or external write action.
+## 🎤 Present the story
 
-Actions and messages are saved locally under `el-jannah-store-os-v1` and `el-jannah-connected-store-v2`, separately for each sample store. The preview preference uses `el-jannah-preview-device`. Storage is local to the browser origin. **Reset walkthrough** clears sample progress and notes after confirmation, then opens **Sign in to El Jannah**. If storage is unavailable, the current session remains usable. The store selector and role selector are presentation controls, not a simulation of access entitlements across every store.
+Use the [8 to 12 minute presenter script](PRESENTER-SCRIPT.md), or open **Presenter script & the problem** above the workspace. The notes follow your current step and give you three things: the problem, what to say and where to click.
 
-Slack-style controls simulate the proposed workflows. The crew view uses approved workflow execution, read-only briefing content and approved in-channel apps. The source workforce and food safety systems retain their records and approvals. Product availability, entitlements and actual integrations need confirming before implementation.
+Start with Omar on the floor, move to Sarah’s next steps and finish with the wider store network. You can open the notes without losing your place in a form, or download the full script to keep beside you.
 
-## Validation
+## A few useful things to know
+
+- **Your work stays in your browser.** Each store keeps its own progress and messages. Each channel has its own conversation and draft. If browser storage is unavailable, you can still use the walkthrough for that session.
+- **Changing context closes the current form.** Choosing another store, person or shift moment closes an open form. Switching Desktop and Mobile keeps it open.
+- **The Store Hub and task list are view-only.** Crew use approved workflows to record work.
+- **Keyboard controls are available.** Use the arrow keys to move between channel tabs, and the store canvas supports turning and zooming from the keyboard. Reduced-motion settings pause the background animation.
+
+This is an interactive concept using example people, messages and figures. It isn’t connected to a live Slack workspace, store system or AI service. Agent replies are scripted, and the huddle controls don’t start a real call or request access to your microphone or camera.
+
+The people in the story are fictional, with stock portraits used consistently throughout. Branch images show Bankstown, Granville and Punchbowl; Ivanhoe uses the El Jannah logo. The 3D store is an illustration, not a floor plan of an actual restaurant.
+
+The examples show how the work could flow. A live rollout would need the right Slack plan, approved integrations and access settings. Workforce and food safety records would stay in their existing systems. The figures shown are examples, not measured business results.
+
+## ☁️ Put it on Vercel
+
+In Vercel, choose **Add New → Project** and import [thehivegremlinforce/eljannah](https://github.com/thehivegremlinforce/eljannah). If the private repository doesn’t appear, give the Vercel GitHub integration access to it.
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | Other |
+| Root directory | `./` |
+| Production branch | `main` |
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Environment variables | None |
+
+The build settings are already in `vercel.json`. Check them, then choose **Deploy**. Vercel serves the files in `dist`; you don’t need to run the local Node server there. The site needs no database, paid API or runtime credentials. Later pushes to `main` normally trigger a new deployment once the repository is connected.
+
+Vercel’s [Hobby plan](https://vercel.com/docs/plans/hobby) is for personal, non-commercial use. A customer or sales presentation may need a commercial plan, even though this site has no paid runtime dependencies.
+
+## 🛠️ Working on the project
+
+Run these checks before pushing a change:
 
 ```sh
 npm run check
@@ -68,51 +120,47 @@ npm test
 npm run build
 ```
 
-`npm test` runs 30 Node tests covering workflow prerequisites, ownership, per-store isolation, saved handover snapshots, access and shift gates, frontline transitions, operation status, message limits, persistent message authors and channels, and safe state restoration.
+The 30 state tests check things such as sign-in, task ownership, saved messages and keeping each store’s work separate. The build writes the website to `dist/`.
 
-Optional browser verification uses Playwright:
+For browser checks, install Playwright and its Chromium browser, start the local server, then run:
 
 ```sh
 node scripts/verify-connected.mjs
 ```
 
-Install Playwright and its Chromium browser in your development environment, or set `PLAYWRIGHT_MODULE` to a local Playwright `index.mjs`. Run the local server first. The 79 browser scenarios cover all ten frontline capabilities in desktop and both phone widths, all ten guided and manually selected manager playbooks, and the seven original workflows. They also check employee-first entry and reset, saved-work reload, presenter script download and step content, form preservation when reading notes, visible and clickable recommended actions, external tips and Continue/Resume cards, external walkthrough summaries, expanded Slack, free exploration, dialog containment, phone interaction states, independent store controls, scrolling, focus restoration, Slack navigation, drafts, device switching, persistence, store isolation, role boundaries and clip playback. The external guide is checked for containment and non-overlap with Slack. Photo loading and full-name consistency, saved message authors, real emoji counts and selection colours, native channel navigation and format switching, adjacent member photos, invitation dismissal/resume, all huddle controls, thread replies, Leave/rejoin cleanup and completion gates are verified. The compact frame is checked at 1440 × 900, 1920 × 1080 and 1280 × 800, including initial entry, device changes and reset. Rotation Start/Stop, Pause/Resume and reset are exercised, and the official Slack header logo is checked for loading and original proportions. No media permission APIs are requested. Phone layouts use Chromium viewport emulation at 390 px and 320 px. Screenshots are written to ignored `artifacts/`. The older `verify-browser.mjs` entry point runs this same suite.
+The browser suite covers 79 scenarios, including the crew and manager journeys, desktop and mobile views, huddles, rotation, saved work and reset. It also checks that forms stay inside Slack and that the click guide remains outside it. Browser screenshots are saved in `artifacts/`, which is excluded from Git.
 
-The presentation targets desktop on a normal office connection, with a responsive mobile layout. Accessibility aims for WCAG AA; this is not a certified audit. Initial targets are LCP below 2.5 seconds, INP below 200 ms and CLS below 0.1. The interface JavaScript budget is 100 KB gzip; the locally bundled 3D renderer has a separate 450 KB gzip budget. Target Lighthouse scores are accessibility 90 and desktop performance 80. These are targets, not measured field results. Codex performed the implementation checks; the delivery team should own any production accessibility sign-off.
+<details>
+<summary>Where to find things in the code</summary>
 
-## Build and hosting
-
-`npm run build` writes a static site to `dist/`. The GitHub repository is [thehivegremlinforce/eljannah](https://github.com/thehivegremlinforce/eljannah), with the application on `main`.
-
-To deploy manually in Vercel, choose **Add New → Project**, import this GitHub repository and use the settings below. If the private repository is missing from the import list, grant the Vercel GitHub integration access to this repository.
-
-| Setting | Value |
+| Files | What they do |
 | --- | --- |
-| Framework preset | Other |
-| Root directory | Repository root, `./` |
-| Production branch | `main` |
-| Build command | `npm run build` |
-| Output directory | `dist` |
-| Environment variables | None |
+| `app.js`, `connected-store.js` | Run the store experience and guided walkthroughs. |
+| `scene.js` | Draw and animate the 3D store. |
+| `slack-shell.js`, `slack-shell.css` | Provide the desktop and mobile Slack views. |
+| `huddle.js`, `huddle.css` | Handle the huddle invitation, room and controls. |
+| `click-guidance.js`, `external-guidance.css` | Show the next-click prompt outside Slack. |
+| `presenter-content.js`, `presenter.css` | Provide the presenter notes. |
+| `workflow.js`, `frontline-state.js` | Track progress and check which actions are ready. |
+| `data.js`, `operations.js`, `identities.js` | Hold the example scenarios, people and store details. |
+| `style.css`, `connected-store.css`, `workspace-layout.css` | Style the page and fit it to the screen. |
+| `client-dialogs.css`, `shell-refinements.css`, `slack-realism.css`, `identities.css` | Style the forms, workspace details and photos. |
+| `server.mjs`, `scripts/build.mjs` | Run the local server and create the static build. |
 
-`vercel.json` supplies the framework, build and output settings. Choose **Deploy** to build and publish the site. Vercel serves the generated static files; it does not need to run `server.mjs`. The application uses no server functions, database, paid API or runtime credentials. Progress is stored in each visitor’s browser. Future pushes to the connected production branch normally trigger another Vercel deployment.
+Browser storage uses `el-jannah-store-os-v1` and `el-jannah-connected-store-v2` for work, and `el-jannah-preview-device` for the chosen view. These records belong to the browser and site address where you opened the walkthrough.
 
-Vercel’s [Hobby plan](https://vercel.com/docs/plans/hobby) is restricted to personal, non-commercial use. The static build has no paid runtime dependency, but a customer or sales presentation may require a commercial plan. Check the intended use against Vercel’s plan terms before deploying.
+Set `PORT` if you need a different local port. If Playwright is installed elsewhere, point `PLAYWRIGHT_MODULE` to its `index.mjs`. The older `scripts/verify-browser.mjs` command runs the same browser suite.
 
-Build output, local Vercel settings, environment files, browser screenshots and source references are excluded from Git. The local Node server serves only app assets and does not expose source references or the `.git` directory.
+Build output, local Vercel settings, environment files, screenshots and source references are excluded from Git. The local server only serves the application files and assets.
 
-## Source references and assets
+</details>
 
-- Supplied `El-Jannah-Slack-Operating-System-external.pptx`: customer story, scenarios and illustrative operating figures.
-- [Supplied frontline presentation](https://docs.google.com/presentation/d/1wkpUVT4thGaEv5BrRXAkphtnR0SrWNIuQXds63l-aAg/edit): crew experience boundaries. Internal commercial details and release claims are not reproduced in the app.
-- [El Jannah website](https://eljannah.com.au/): official green `#5CBF1A`, forest `#114734`, charcoal and white, plus the public logo and Vonder Rough headline font.
-- [Slack for Windows](https://slack.com/intl/en-au/downloads/windows) and [Slack for iOS](https://slack.com/intl/en-au/downloads/ios): official visual references for the desktop workspace and mobile Home and conversation screens. The outer presentation keeps El Jannah's branding; the workspace uses Slack's purple, white and neutral interface treatment.
-- [Airline operations demo](https://github.com/thehivegremlinforce/airlineopsdemo): interaction reference and the locally bundled Three.js renderer.
+## Sources and credits
 
-The El Jannah logo and font are included for this customer concept and remain subject to their owners’ rights. See `assets/PROVENANCE.md`. Three.js is distributed under its included MIT licence in `vendor/THREE-LICENSE.txt`.
+The supplied El Jannah strategy deck and [frontline pack](https://docs.google.com/presentation/d/1wkpUVT4thGaEv5BrRXAkphtnR0SrWNIuQXds63l-aAg/edit) shaped the story and example scenarios.
 
-The supplied huddle screenshot informs its participant, thread and toolbar layout. Photograph sources, licence information and the official Claude icon are recorded in `assets/PROVENANCE.md`. `identities.js` maps the named demo people and branches to local assets; `huddle.js` and `huddle.css` provide the simulated huddle; `slack-realism.css` styles photo labels, branch cards and emoji reactions.
+- [El Jannah’s website](https://eljannah.com.au/) provided the colours, logo, font and branch photographs.
+- [Slack for Windows](https://slack.com/intl/en-au/downloads/windows), [Slack for iOS](https://slack.com/intl/en-au/downloads/ios) and the supplied huddle screenshots guided the workspace design.
+- The [airline operations project](https://github.com/thehivegremlinforce/airlineopsdemo) inspired the store animation and interaction.
 
-## Files
-
-`app.js` owns the main interface and original workflows; `connected-store.js` adds the guided journey, device preview and manager playbooks. `click-guidance.js` selects one recommended action, while `external-guidance.css` places tips and journey controls outside Slack. `presenter-content.js` and `presenter.css` provide the script and problem framing. `slack-shell.js` and `slack-shell.css` provide the desktop and mobile workspace navigation and visual treatment. `client-dialogs.css` keeps workflow forms inside the client. `data.js` and `operations.js` contain the illustrative scenarios. `workflow.js` and `frontline-state.js` hold validated state transitions. `scene.js` implements the Three.js store and its phone interaction. `style.css` and `connected-store.css` contain the surrounding brand treatment; `workspace-layout.css` provides the compact viewport layout and persistent store controls. `server.mjs` serves the local preview; `scripts/build.mjs` creates the static output.
+Photo sources, logos and asset details are recorded in [the asset credits](assets/PROVENANCE.md). Brand assets remain the property of their owners. Three.js is included under its [MIT licence](vendor/THREE-LICENSE.txt).
