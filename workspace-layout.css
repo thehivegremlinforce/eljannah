@@ -1,5 +1,8 @@
 /* Fit the working area to the screen; let Slack scroll its own conversations. */
 main{max-width:1840px;padding:0 24px}
+.site-footer{flex-wrap:wrap}
+.site-credit{flex-basis:100%;margin:0;color:var(--forest);font-size:12px;line-height:1.5;text-align:center}
+.site-credit>[role="img"]{font-family:"Apple Color Emoji","Segoe UI Emoji",sans-serif;font-size:16px;vertical-align:-1px}
 .site-header{height:58px;padding:0 24px;gap:18px}
 .brand{gap:14px}.brand img{width:82px;height:45px}.brand-divider{height:27px}
 .brand>span:last-child{font-size:8px;letter-spacing:1.2px}
