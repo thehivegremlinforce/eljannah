@@ -1,209 +1,272 @@
 # Slack is the work OS for every connected store
 
-An 8 to 12 minute walkthrough for the El Jannah store operating system concept.
+A presenter’s guide to a connected El Jannah shift. Allow **about 10 minutes**, or a little longer if people want to explore.
 
-## Presenter setup
+Use the **💬 Say** lines as prompts. Make them your own. The **👉 Click** lines show exactly what to do next.
 
-Start with **Bankstown** and the **Frontline crew** perspective. Use **Mobile** to tell Omar’s story, then **Desktop** for Sarah’s manager walkthrough. A fresh visit opens **Sign in to El Jannah** automatically. If this browser already has progress, use **Reset walkthrough** and confirm the reset before presenting. This clears saved progress for all four stores and opens employee sign-in again. A returning employee who has already signed in keeps their saved work and returns to the store opening.
+## 🎬 Before you start
 
-The people, messages, figures and outcomes are illustrative. The buttons change the local walkthrough; they do not sign anyone into Slack, alter a roster, open a live call, query a live AI service or publish a guest response. The connected apps show the proposed experience. Introduce that once, then focus on the work.
+- Select **Bankstown** and **Frontline crew**.
+- Use **Mobile** for Omar’s shift, then **Desktop** for Sarah’s manager view.
+- Start on **Sign in to El Jannah**. If there’s saved progress, choose **Reset walkthrough** and confirm. This clears progress for all four stores and opens sign-in again.
+- Keep the **Walkthrough guide** beside Slack. It shows where to click. After each step, use **Continue** in that guide to move on at your own pace.
 
-Allow about one minute for the opening, four minutes for the crew shift, four minutes for the manager examples and one minute for the network and close. Read the spoken lines naturally, then pause for the action. The **Walkthrough guide** sits outside the Slack client, beside it where space allows. Read its click tip, then use the highlighted action in Slack. After each completed step, use **Continue** in the external guide. The walkthrough advances when you choose to continue.
+**Your running order:** set the scene, follow Omar’s shift, switch to Sarah, then show the store network.
 
-## Opening: what are we trying to solve?
+**A note for the presenter:** This is a concept using example people, figures and situations. Actions stay in this browser. They don’t sign anyone into Slack, change a live roster, start a real call, use live AI or publish a review response. Mention that once at the start, then focus on the story.
 
-**The proposed problem:** Store teams need a clear next step when updates, issues and decisions sit in different places. A crew member needs the right brief and an easy way to ask for help. A manager needs the evidence, an owner and a follow-up. The next shift needs the context to carry on.
+## 🎯 Set the scene: what are we trying to solve?
 
-**Say:** “We’re looking at how Slack could be the work OS for every connected El Jannah store. The goal is to make it clear what needs attention, who owns it and where the next shift can find the context. These are sample situations, so we can explore the experience together.”
+A busy shift gets harder when the brief is in one place, the question is somewhere else and nobody is sure who’s following up.
 
-**On screen:** Employee sign-in is already open. Begin with Omar Haddad, a crew member on packing and collection. Layla Darwish is the shift leader, Sarah Mansour is the manager on duty and Karim Nasser is the area manager. There is no initial Start button to press before signing in.
+We want to make three things easier:
 
-## The employee story: one connected shift
+- **Find what matters.** Give the crew the current brief, tasks and help in one place.
+- **Know who’s handling it.** Give each issue an owner and a clear next step.
+- **Leave the next shift in the know.** Keep the decision and follow-up where the team can find them.
 
-### 1. Email-free access
+💬 **Say**
 
-**Problem:** Getting the shift brief should not depend on having a corporate email address.
+> “Let’s follow a shift at El Jannah. We’ll start with Omar on packing and collection, then see how Sarah, his manager, picks up what needs attention. These are example situations, but the question is practical: how could Slack help everyone know what to do next?”
 
-**Say:** “Omar starts with an employee ID and a security check. This shows how the crew could reach their assigned workspace without a corporate email address.”
+👉 **On screen:** Omar’s sign-in page is already open. You can start there.
 
-**Click:** In **Sign in to El Jannah**, point out Omar’s **Employee ID EJ-014** and select **Continue**. In **Confirm your sign-in**, select **Approve sign-in**. Use the supplied read-only details. Continue to the channel step.
+**Meet the team:** Omar Haddad is on the crew, Layla Darwish leads the shift, Sarah Mansour manages the store and Karim Nasser is the area manager.
 
-### 2. Ten relevant channels
+## 📱 Part 1: follow Omar’s shift
 
-**Problem:** A busy crew needs relevant updates without searching a whole company workspace.
+### 1. Get in without a work email
 
-**Say:** “Omar has ten assigned channels, with the store conversation close at hand. The business manages the channel set so the crew can focus on the shift.”
+💬 **Say**
 
-**Click:** Point out the ten channels in Slack’s normal Home list or desktop sidebar. Choose **#store-bankstown** to open the conversation, then continue.
+> “Omar shouldn’t need a corporate email address to get the shift brief. He uses his employee ID and a security check to reach the workspace assigned to him.”
 
-### 3. A briefing ready when the crew is
+👉 **Click:** Point out **Employee ID EJ-014**, then choose **Continue** → **Approve sign-in**. Use **Continue** in the guide to move on.
 
-**Problem:** People starting at different times still need the same shift briefing.
+### 2. Find the right conversation
 
-**Say:** “Layla’s short briefing is ready when Omar is. He can watch the captioned clip or read the transcript, and the next crew can catch up in the same place.”
+💬 **Say**
 
-**Click:** **Play the 12-second briefing**. Let it finish, then choose **Briefing watched. Continue**. Alternatively, open **Or read the briefing transcript** and choose **I’ve read the briefing**. Continue to the Store Hub.
+> “Here are Omar’s ten assigned channels, right in the normal Slack channel list. The business chooses what the crew needs, so he can get straight to his store’s conversation.”
 
-### 4. The Store Hub canvas
+👉 **Click:** Show the channels in Slack Home, then open **#store-bankstown**. Continue in the guide.
 
-**Problem:** The crew needs one place to find the current brief, contacts and procedure links.
+### 3. Catch up on the brief
 
-**Say:** “The Store Hub brings today’s essentials together in a canvas the crew can read. People records and approved procedures stay in their source systems, with the right links here.”
+💬 **Say**
 
-**Click:** Read the brief and contacts, then choose **Store brief read**. If asked, the record-link previews explain where acknowledgements and source procedures belong. Continue.
+> “Not everyone starts at the same time. Layla’s short briefing is here when Omar arrives. He can watch the captions or read the transcript and catch up before getting started.”
 
-### 5. Tasks, owners and status
+👉 **Click:** **Play the 12-second briefing** → let it finish → **Briefing watched. Continue**. Then continue in the guide.
 
-**Problem:** Tasks are hard to follow when the owner and current status are unclear.
+**Prefer the transcript?** Choose **Or read the briefing transcript** → **I’ve read the briefing**. Both paths complete this step. The clip has captions and no audio.
 
-**Say:** “Omar can see the shift tasks, who owns them and what still needs attention. The list is view-only for the crew, with approved workflows available to record a check.”
+### 4. Keep the essentials in the Store Hub
 
-**Click:** **I’ve read the task list**. The optional **Open the check workflow** is available for a deeper look; use the reading action for this main walkthrough. Continue.
+💬 **Say**
 
-### 6. The shift and its approval path
+> “The Store Hub puts today’s brief, key contacts and procedure links together. Omar can read this canvas whenever he needs it. The original records and procedures stay in the apps that manage them.”
 
-**Problem:** Schedule questions and open-shift requests need a clear approval path.
+👉 **Click:** Point out the brief and contacts, then choose **Store brief read**. Continue in the guide.
 
-**Say:** “Omar can see his shift, request an open shift and clock in through the workforce app. A request still needs Sarah’s approval, and the roster and time record stay with that app.”
+### 5. See the checks and who owns them
 
-**Click:** Review the schedule, then **Clock in**. Continue. For an optional approval example before clocking in, choose **View open shifts**, then **Request this shift** on either open shift. Point out **Requested · awaiting approval**, choose **Back to my shift**, then clock in.
+💬 **Say**
 
-### 7. A packing issue gets an owner
+> “These are the shift tasks, the people responsible and what’s still to do. Omar can read the list. When he needs to record a check, he uses the approved workflow.”
 
-**Problem:** An issue raised on the floor needs enough context and a named owner.
+👉 **Click:** **I’ve read the task list**, then continue in the guide.
 
-**Say:** “Omar has noticed garlic sauce tubs being missed at the packing bench. This approved form sends the details to Sarah and keeps the request visible in the store channel.”
+### 6. Check the roster and clock in
 
-**Click:** Read or edit the packing issue, then **Submit issue**. Point out that Sarah owns the response. Continue.
+💬 **Say**
 
-### 8. A huddle leaves a useful record
+> “Omar can see his shift and clock in through the connected workforce app. He can also request an open shift. Sarah still approves the request, and the workforce app keeps the roster and time record.”
 
-**Problem:** A quick conversation needs an agreed next step that the rest of the team can find.
+👉 **Click:** Review the schedule, choose **Clock in**, then continue in the guide.
 
-**Say:** “Omar, Layla and Sarah talk through the reported issue. The useful part is what stays afterwards: the issue, the agreed packing check and the follow-up in the channel.”
+<details>
+<summary>🔎 Optional: show an open-shift request</summary>
 
-**Click:** Sarah’s invitation appears with the people already in the huddle. Choose **Join**. Read the reported issue and agreed next step, then choose **Keep the agreed action in the channel**. Continue.
+Before clocking in, choose **View open shifts** → **Request this shift**.
 
-**Optional detail:** Point to the participant photos, the issue in the thread and the call controls. Add a 👍 reaction or a short reply to show how the conversation stays together. The microphone, camera and screen controls are local previews. **Leave** returns to the store without completing the step; **Resume** opens it again.
+Point out **Requested · awaiting approval**, then choose **Back to my shift** → **Clock in**.
 
-### 9. Help in the channel
+</details>
 
-**Problem:** Routine questions can interrupt the shift when people do not know where to look.
+### 7. Raise a packing issue
 
-**Say:** “Omar asks the approved store guide how to request shift cover. The reply points him to the workflow and its approval path, and stays in the channel for the team.”
+💬 **Say**
 
-**Click:** Keep the sample question, **How do I ask for shift cover?**, and choose **Ask the approved agent**. Read the reply, then **Keep the answer in the channel**. Continue.
+> “Omar notices garlic sauce tubs being missed at the packing bench. He sends the details through a short form. Sarah gets the issue, and the request stays in the store channel so the team can follow it.”
 
-### 10. Clear boundaries and a useful handover
+👉 **Click:** Review or edit the details → **Submit issue**. Point out Sarah as the owner, then continue in the guide.
 
-**Problem:** Crew access needs clear boundaries while store work carries into the next shift.
+### 8. Talk it through in a huddle
 
-**Say:** “Omar can work in his assigned channels, with external direct messages and Slack Connect restricted for this frontline role. He clocks out through the workforce app, while the store keeps the issue and agreed action for the next crew.”
+💬 **Say**
 
-**Click:** Try **External direct message** and point out the restriction. You can also try **Slack Connect** before choosing **Clock out** and **Finish the crew walkthrough**.
+> “Sarah invites Omar into a huddle with Layla. They talk through the packing issue and agree on a check. We’ll keep that action in the channel so the next crew can see what was decided.”
 
-## Transition: from Omar’s shift to Sarah’s decisions
+👉 **Click:** **Join** → review the issue and next step → **Keep the agreed action in the channel**. Continue in the guide.
 
-**Say:** “Omar has the brief, a way to raise an issue and a record the next crew can use. Now let’s follow the manager’s side: bringing a signal into the store channel, choosing a response and keeping the follow-up visible.”
+<details>
+<summary>🎧 Optional: take a closer look at the huddle</summary>
 
-**Click:** **Start the manager walkthrough**, then choose **Desktop** if you began on Mobile. This walkthrough follows Bankstown’s ten manager situations.
+Point out the participant photos, thread and call controls. Try a 👍 reaction or a short reply.
 
-The examples cover different trading and review windows. They are not a measured chain of outcomes from Omar’s packing issue. In the first eight playbooks, **Record a resolved follow-up** records a sample completion; it does not prove a trading metric improved. Keep that distinction clear if discussing outcomes.
+The call controls are previews. Replies and reactions last while this huddle is open; saving the agreed action keeps that outcome in the store channel.
 
-## The manager story: ten useful decisions
+**Leave** closes the huddle without completing the step. Use **Resume** to reopen the invitation and join again.
 
-### 1. Spot a pattern in guest feedback
+</details>
 
-**Problem:** Related complaints can be easy to miss when they arrive through different channels.
+### 9. Get help without leaving the channel
 
-**Say:** “Sarah sees three missing-item reports brought together as one pattern. She can give the packing check an owner, then keep the follow-up with the original reports.”
+💬 **Say**
 
-**Click:** **Assign the packing check**, then **Record a resolved follow-up**. Continue.
+> “Omar needs to know how to ask for shift cover. The approved agent points him to the right workflow and explains who approves it. He can keep the answer in the channel for the team.”
 
-### 2. Get the drive-thru moving
+👉 **Click:** Use **How do I ask for shift cover?** → **Ask the approved agent** → read the reply → **Keep the answer in the channel**. Continue in the guide.
 
-**Problem:** A queue alert needs store context and a practical response.
+### 10. Clock out and leave the next crew informed
 
-**Say:** “The ticket time sits beside this store’s target and comparison window. Sarah can review the suggested rush playbook and coordinate a response with the shift leader.”
+💬 **Say**
 
-**Click:** **Assign the rush playbook**, then **Record a resolved follow-up**. Continue.
+> “For this frontline role, external direct messages and Slack Connect are restricted. Omar has what he needs for his shift. When he clocks out, the issue and agreed action stay available for the next crew.”
 
-### 3. Catch a paused delivery feed
+👉 **Click:** **External direct message** to show the restriction → **Clock out** → **Finish the crew walkthrough**. You can also show the **Slack Connect** restriction before clocking out.
 
-**Problem:** A paused delivery channel needs a readiness check and a clear decision owner.
+## 🖥️ Part 2: switch to Sarah’s view
 
-**Say:** “The delivery pause arrives with its duration and estimated trading impact. Sarah owns the stock and packing readiness check before anyone decides to resume the channel.”
+💬 **Say**
 
-**Click:** **Assign the availability check**, then **Record a resolved follow-up**. Continue.
+> “Omar has found the brief, raised an issue and left a useful record. Now let’s look at Sarah’s side. What needs her attention, who can help and how does she keep track of the follow-up?”
 
-### 4. Find the cause of order errors
+👉 **Click:** **Start the manager walkthrough** → **Desktop**.
 
-**Problem:** A rise in order errors needs a specific packing check and a follow-up.
+The next ten situations show different parts of a manager’s job. They happen at different times, so don’t present them as results from Omar’s one packing issue.
 
-**Say:** “The errors point to the items appearing most often in the reports. Sarah can focus the packing check on those items and keep the next review with the action.”
+**For steps 1–8:** assign the action, choose **Record a resolved follow-up**, then **Continue** in the guide. This shows what a completed follow-up looks like. It doesn’t demonstrate an improvement in sales or service.
 
-**Click:** **Assign an order accuracy check**, then **Record a resolved follow-up**. Continue.
+### 1. Spot a pattern in guest complaints
 
-### 5. Act on today’s trading pace
+💬 **Say**
 
-**Problem:** A trading update needs to arrive while the store still has time to respond.
+> “Three guests have reported missing items. Sarah can see the reports together, give someone the packing check and keep the follow-up beside the original feedback.”
 
-**Say:** “This example returns to a 2 pm trading checkpoint, with sales compared against forecast and the comparable day last year. Sarah can check availability and channel mix, then give the remaining trading period one useful focus.”
+👉 **Click:** **Assign the packing check** → **Record a resolved follow-up** → continue in the guide.
 
-**Click:** **Assign today’s trading focus**, then **Record a resolved follow-up**. Continue.
+### 2. Respond to a slow drive-thru
 
-### 6. Ask what is behind the numbers
+💬 **Say**
 
-**Problem:** A manager needs the evidence behind a change before choosing a response.
+> “The ticket time is above the store’s target. Sarah can see the comparison, review the suggested rush playbook and ask the shift leader to coordinate the response.”
 
-**Say:** “The approved diagnostics example brings channel mix, availability and guest feedback together. The pattern suggests where Sarah should investigate; she still checks the evidence and owns the decision.”
+👉 **Click:** **Assign the rush playbook** → **Record a resolved follow-up** → continue in the guide.
 
-**Click:** Read the evidence, choose **Assign the diagnostic follow-up**, then **Record a resolved follow-up**. Continue. The diagnostic answer is scripted for this walkthrough.
+### 3. Check why delivery is paused
 
-### 7. Start Monday with a clear store pack
+💬 **Say**
 
-**Problem:** The weekly review needs to carry unfinished work forward as well as show the scorecard.
+> “The delivery channel is paused. Sarah can see how long it’s been paused and the estimated impact. She gets the stock and packing checks underway before deciding whether the store is ready to resume.”
 
-**Say:** “Karim’s Monday pack pairs the store’s priority metrics with its outstanding actions. That gives Sarah a clear weekly focus and keeps last week’s commitments in view.”
+👉 **Click:** **Assign the availability check** → **Record a resolved follow-up** → continue in the guide.
 
-**Click:** **Assign the weekly store focus**, then **Record a resolved follow-up**. Continue.
+### 4. Focus on the items being missed
 
-### 8. Turn a ranking change into support
+💬 **Say**
 
-**Problem:** A ranking change needs an explanation and an offer of practical support.
+> “The order error reports show which items are being missed most often. Sarah can focus the packing check on those items and make sure someone follows up.”
 
-**Say:** “The ranking drop comes with the metric behind it and a matching packing playbook. Sarah and Karim can agree on the response and the next review together.”
+👉 **Click:** **Assign an order accuracy check** → **Record a resolved follow-up** → continue in the guide.
 
-**Click:** **Assign the improvement playbook**, then **Record a resolved follow-up**. Continue.
+### 5. Act while there’s still time in the day
 
-### 9. Keep an unresolved complaint moving
+💬 **Say**
 
-**Problem:** An unresolved complaint needs to keep moving without losing its owner or history.
+> “This example takes us to 2 pm. Sarah sees sales against forecast and the comparable day last year. She can check availability and where orders are coming from, then choose a focus for the rest of the day.”
 
-**Say:** “The complaint is still open after 48 hours. Sarah sends the reminder, then escalates it to Karim with the original owner and history attached.”
+👉 **Click:** **Assign today’s trading focus** → **Record a resolved follow-up** → continue in the guide.
 
-**Click:** **Send the 48-hour reminder**, then **Escalate to Karim**. Escalation completes this guided example. Continue to the response review.
+### 6. Look behind the numbers
 
-### 10. Give every guest response a human check
+💬 **Say**
 
-**Problem:** A guest response needs a person to check the wording before approving it.
+> “Sarah can bring order channels, availability and guest feedback into one view. The suggested explanation gives her somewhere to start looking. She still checks the facts and decides what to do.”
 
-**Say:** “Sarah reads the proposed response beside the review and can edit it before approval. The approved wording stays with the manager’s decision.”
+👉 **Click:** Read the evidence → **Assign the diagnostic follow-up** → **Record a resolved follow-up** → continue in the guide.
 
-**Click:** Read or edit the draft, then **Approve this draft**. Choose **Finish the manager walkthrough**.
+### 7. Start Monday with a clear plan
 
-## The network and close
+💬 **Say**
 
-**Problem:** Area managers need context across stores while each store keeps a clear local owner.
+> “Karim’s weekly store pack brings the key numbers and unfinished actions together. Sarah can see what needs attention this week without losing track of last week’s commitments.”
 
-**Click:** **Open the store network**. Show the four sample stores. If useful, select a store card to return to its local context, then use **Across our stores** to return to the network. **Open the weekly briefing** is available for a deeper area-manager discussion.
+👉 **Click:** **Assign the weekly store focus** → **Record a resolved follow-up** → continue in the guide.
 
-**Say:** “The same approach connects a crew question, a manager’s decision and the area view. Slack is the work OS for every connected store, with the conversation and next step together while the original records stay in their source systems. From here, we can choose the first store signals and approvals El Jannah would want to connect.”
+### 8. Turn a ranking drop into useful support
 
-## If the audience takes a different path
+💬 **Say**
 
-- Use **Show me where to click** to bring the current action into view. If a step was closed, choose its **Resume** button.
-- Use **Explore freely** when the audience wants to inspect a different feature. **Continue the employee walkthrough** resumes the first unfinished crew capability for the selected store.
-- A completed crew journey opens its summary. Use **Start the manager walkthrough** from there, or **Reset walkthrough** before a fresh presentation.
-- Keep Bankstown selected for this script. Switching stores pauses the guide, and each sample store has its own saved progress.
-- If the clip does not play, read the transcript and choose **I’ve read the briefing**. It completes the same capability.
+> “A lower ranking needs more than a number. Sarah can see what’s behind the change and a packing playbook that could help. She and Karim can agree on the support and when to check back.”
+
+👉 **Click:** **Assign the improvement playbook** → **Record a resolved follow-up** → continue in the guide.
+
+### 9. Follow up on a complaint that’s still open
+
+💬 **Say**
+
+> “This complaint is still open after 48 hours. Sarah sends a reminder, then brings Karim in with the history attached. He can pick it up without asking the store to explain everything again.”
+
+👉 **Click:** **Send the 48-hour reminder** → **Escalate to Karim** → continue in the guide. The complaint has been escalated, not resolved.
+
+### 10. Check the words before approving a reply
+
+💬 **Say**
+
+> “Sarah reads the suggested response beside the guest’s review. She can change the wording before approving it, and her decision stays with the draft.”
+
+👉 **Click:** Read or edit the response → **Approve this draft** → **Finish the manager walkthrough**.
+
+## 🏪 Part 3: bring the stores together
+
+👉 **Click:** **Open the store network** and show the four stores.
+
+💬 **Say**
+
+> “Now Karim can look across the stores while each store keeps someone responsible for its own work. He can spot where help is needed and open the store’s conversation to understand what’s happening.”
+
+**If you want to go deeper:** Select a store card, then use **Across our stores** to return. **Open the weekly briefing** shows more of the area manager’s view.
+
+## 🎤 Close with the point that matters
+
+💬 **Say**
+
+> “That’s the idea: Slack is the work OS for every connected store. The crew knows where to find the brief and ask for help. Managers can assign the next step and follow it through. The next shift can see what happened.”
+>
+> “For El Jannah, which would you connect first: the shift brief, packing issues or the manager’s daily checks?”
+
+Pause here and let the audience answer.
+
+## 🧭 If you need to find your place
+
+| What’s happened? | What to do |
+| --- | --- |
+| You’re unsure where to click. | Choose **Show me where to click**. |
+| You closed the current step. | Choose **Resume**. |
+| Someone wants to explore. | Choose **Explore freely**. |
+| You want to return to Omar’s story. | Choose **Continue the employee walkthrough**. It resumes the first unfinished crew step for that store. |
+| Omar’s journey is already complete. | Choose **Review the completed shift** to open the summary. |
+| You’re ready for Sarah’s story. | Choose **Start the manager walkthrough** from the crew summary. |
+| The clip won’t play. | Open the transcript and choose **I’ve read the briefing**. |
+| You switched stores. | Each store keeps its own progress, and switching pauses the guide. Return to **Bankstown** to follow this script. |
+| You want a fresh start. | Choose **Reset walkthrough** and confirm. All four stores reset, and employee sign-in opens again. |
+
+<details>
+<summary>🔎 Two more places to explore if someone asks</summary>
+
+- In the **Store Hub**, open the record-link previews to explain where the original procedures and acknowledgements live.
+- In **Shift tasks**, choose **Open the check workflow** to show how a crew member records a check. The task list itself stays view-only.
+
+</details>
